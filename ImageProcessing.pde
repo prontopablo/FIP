@@ -1,0 +1,50 @@
+PShader[] customShaders = new PShader[5]; // Array to hold custom shaders
+int currentShaderIndex = 0; // Index to keep track of the current shader
+float blurAmount = 3.0;
+
+void setup() {
+  size(1000, 1000, P2D);
+  customShaders[0] = loadShader("gaussianBlur.glsl"); // Example blur (takes no parameters)
+  customShaders[1] = loadShader("motionBlur.glsl");
+  customShaders[2] = loadShader("laplacian.glsl");
+  customShaders[3] = loadShader("edgeDetection.glsl");
+  customShaders[4] = loadShader("edgeEnhancement.glsl");
+  stroke(255, 0, 0);
+  rectMode(CENTER);
+}
+
+void draw() {
+  // Start measuring time
+  int startTime = millis();
+
+  // Apply the currently selected shader
+  if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
+    if (currentShaderIndex == 1) { // Apply motion blur shader
+      customShaders[currentShaderIndex].set("texOffset", 1.0 / width, 1.0 / height);
+      customShaders[currentShaderIndex].set("blurAmount", blurAmount);
+    }
+    filter(customShaders[currentShaderIndex]);
+  } else {
+    filter(BLUR); // Default to built-in blur
+  }
+  
+  // Draw shapes
+  rect(mouseX, mouseY, 350, 350);
+  ellipse(mouseX, mouseY, 300, 300);
+  // End measuring time
+  int endTime = millis();
+  println("Time taken: " + (endTime - startTime) + " ms");
+}
+
+void keyPressed() {
+  // Cycle through custom shaders when number keys (1-4) are pressed
+  if (key >= '1' && key <= '5') {
+    currentShaderIndex = int(key) - '1'; // Convert key to shader index
+    println("Using custom shader: " + (currentShaderIndex + 1));
+  } 
+  // Switch to built-in blur when the '0' key is pressed
+  else if (key == '0') {
+    currentShaderIndex = -1; // Use built-in blur
+    println("Using built-in blur");
+  }
+}
