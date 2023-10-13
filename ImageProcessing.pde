@@ -1,6 +1,6 @@
 PShader[] customShaders = new PShader[6]; // Array to hold custom shaders
 int currentShaderIndex = 0; // Index to keep track of the current shader
-float blurAmount = 3.0;
+float blurAmount = 5.0; // To override the default values
 PImage lucio;
 
 void setup() {
