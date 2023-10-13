@@ -1,4 +1,4 @@
-PShader[] customShaders = new PShader[5]; // Array to hold custom shaders
+PShader[] customShaders = new PShader[6]; // Array to hold custom shaders
 int currentShaderIndex = 0; // Index to keep track of the current shader
 float blurAmount = 3.0;
 
@@ -9,6 +9,8 @@ void setup() {
   customShaders[2] = loadShader("laplacian.glsl");
   customShaders[3] = loadShader("edgeDetection.glsl");
   customShaders[4] = loadShader("edgeEnhancement.glsl");
+  customShaders[5] = loadShader("differenceOfGaussian.glsl");
+
   stroke(255, 0, 0);
   rectMode(CENTER);
 }
@@ -33,12 +35,12 @@ void draw() {
   ellipse(mouseX, mouseY, 300, 300);
   // End measuring time
   int endTime = millis();
-  println("Time taken: " + (endTime - startTime) + " ms");
+  //println("Time taken: " + (endTime - startTime) + " ms");
 }
 
 void keyPressed() {
-  // Cycle through custom shaders when number keys (1-4) are pressed
-  if (key >= '1' && key <= '5') {
+  // Cycle through custom shaders when number keys (1-6) are pressed
+  if (key >= '1' && key <= '6') {
     currentShaderIndex = int(key) - '1'; // Convert key to shader index
     println("Using custom shader: " + (currentShaderIndex + 1));
   } 
