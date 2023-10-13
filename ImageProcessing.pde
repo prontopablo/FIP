@@ -1,6 +1,7 @@
 PShader[] customShaders = new PShader[6]; // Array to hold custom shaders
 int currentShaderIndex = 0; // Index to keep track of the current shader
 float blurAmount = 3.0;
+PImage lucio;
 
 void setup() {
   size(1000, 1000, P2D);
@@ -10,7 +11,7 @@ void setup() {
   customShaders[3] = loadShader("edgeDetection.glsl");
   customShaders[4] = loadShader("edgeEnhancement.glsl");
   customShaders[5] = loadShader("differenceOfGaussian.glsl");
-
+  lucio = loadImage("lucio.jpg");
   stroke(255, 0, 0);
   rectMode(CENTER);
 }
@@ -18,12 +19,16 @@ void setup() {
 void draw() {
   // Start measuring time
   int startTime = millis();
-
+  image(lucio, 0, 0, width, height);
   // Apply the currently selected shader
   if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
     if (currentShaderIndex == 1) { // Apply motion blur shader
       customShaders[currentShaderIndex].set("texOffset", 1.0 / width, 1.0 / height);
       customShaders[currentShaderIndex].set("blurAmount", blurAmount);
+    }
+    else if (currentShaderIndex == 5){
+      customShaders[currentShaderIndex].set("radius1", 10.0); // Adjust the radii as needed
+      customShaders[currentShaderIndex].set("radius2", 5.0);
     }
     filter(customShaders[currentShaderIndex]);
   } else {
@@ -31,8 +36,9 @@ void draw() {
   }
   
   // Draw shapes
-  rect(mouseX, mouseY, 350, 350);
-  ellipse(mouseX, mouseY, 300, 300);
+  //rect(mouseX, mouseY, 350, 350);
+  //ellipse(mouseX, mouseY, 300, 300);
+  
   // End measuring time
   int endTime = millis();
   //println("Time taken: " + (endTime - startTime) + " ms");

@@ -3,43 +3,35 @@ precision mediump float;
 precision mediump int;
 #endif
 
-#define PROCESSING_TEXTURE_SHADER
-
 uniform sampler2D texture;
-uniform vec2 texOffset;
+uniform vec2 resolution;
+uniform float radius1;
+uniform float radius2;
 
-varying vec4 vertColor;
-varying vec4 vertTexCoord;
+void main() {
+    vec2 st = gl_FragCoord.xy / resolution;
 
-// Function to calculate Gaussian blur for a given texture coordinate
-vec4 gaussianBlur(sampler2D tex, vec2 texCoords, vec2 direction, float radius) {
-    vec4 sum = vec4(0.0);
-    float totalWeight = 0.0;
-    
-    for (float i = -radius; i <= radius; i++) {
-        for (float j = -radius; j <= radius; j++) {
-            vec2 offset = vec2(i, j) * texOffset;
-            vec4 sample = texture2D(tex, texCoords + offset);
-            float weight = exp(-(i * i + j * j) / (2.0 * radius * radius));
-            sum += sample * weight;
-            totalWeight += weight;
+    vec4 color1 = texture2D(texture, st);
+    vec4 color2 = texture2D(texture, st);
+
+    // Apply the first Gaussian blur
+    for (float x = -radius1; x <= radius1; x++) {
+        for (float y = -radius1; y <= radius1; y++) {
+            color1 += texture2D(texture, st + vec2(x, y) / resolution);
         }
     }
-    
-    return sum / totalWeight;
-}
+    color1 /= (2.0 * radius1 + 1.0) * (2.0 * radius1 + 1.0);
 
-void main(void) {
-    vec2 texCoords = vertTexCoord.st;
-    float radius1 = 4.0; // Adjust the first blur radius as needed
-    float radius2 = 8.0; // Adjust the second blur radius as needed
+    // Apply the second Gaussian blur
+    for (float x = -radius2; x <= radius2; x++) {
+        for (float y = -radius2; y <= radius2; y++) {
+            color2 += texture2D(texture, st + vec2(x, y) / resolution);
+        }
+    }
+    color2 /= (2.0 * radius2 + 1.0) * (2.0 * radius2 + 1.0);
 
-    // Calculate two Gaussian-blurred versions of the input image
-    vec4 blurred1 = gaussianBlur(texture, texCoords, vec2(1.0, 1.0), radius1);
-    vec4 blurred2 = gaussianBlur(texture, texCoords, vec2(1.0, 1.0), radius2);
+    // Calculate the Difference of Gaussian
+    vec4 dog = color1 - color2;
 
-    // Calculate the Difference of Gaussians
-    vec4 dog = blurred1 - blurred2;
-
-    gl_FragColor = dog * vertColor;
+    gl_FragColor = dog;
 }
