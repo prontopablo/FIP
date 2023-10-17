@@ -1,5 +1,5 @@
-PShader[] customShaders = new PShader[11]; // Array to hold custom shaders
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Laplacian Filter", "Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors" };
+PShader[] customShaders = new PShader[12]; // Array to hold custom shaders
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette" };
 int currentShaderIndex = 0; // Index to keep track of the current shader
 PImage lucio;
 PImage venice;
@@ -8,15 +8,16 @@ void setup() {
   size(1000, 1000, P2D);
   customShaders[0] = loadShader("gaussianBlur.glsl"); // Example blur (takes no parameters)
   customShaders[1] = loadShader("motionBlur.glsl");
-  customShaders[2] = loadShader("laplacianFilterWithThreshold.glsl");
-  customShaders[3] = loadShader("edgeDetection.glsl");
-  customShaders[4] = loadShader("laplacianEdgeEnhancement.glsl");
-  customShaders[5] = loadShader("differenceOfGaussian.glsl");
-  customShaders[6] = loadShader("unsharpMasking.glsl");
-  customShaders[7] = loadShader("edgePreservingFilter.glsl");
-  customShaders[8] = loadShader("grayscale.glsl");
-  customShaders[9] = loadShader("flip.glsl");
-  customShaders[10] = loadShader("invertColors.glsl");
+  customShaders[2] = loadShader("edgeDetection.glsl");
+  customShaders[3] = loadShader("laplacianEdgeEnhancement.glsl");
+  customShaders[4] = loadShader("differenceOfGaussian.glsl");
+  customShaders[5] = loadShader("unsharpMasking.glsl");
+  customShaders[6] = loadShader("edgePreservingFilter.glsl");
+  customShaders[7] = loadShader("grayscale.glsl");
+  customShaders[8] = loadShader("flip.glsl");
+  customShaders[9] = loadShader("invertColors.glsl");
+  customShaders[10] = loadShader("erosion.glsl");
+  customShaders[11] = loadShader("vignette.glsl");
   println("Using: " + shaderNames[currentShaderIndex]);
   lucio = loadImage("lucio.jpg");
   venice = loadImage("venice.jpg");
@@ -36,7 +37,7 @@ void draw() {
       customShaders[currentShaderIndex].set("blurAmount", 5.0);
     } else if (currentShaderIndex == 5) {
       customShaders[currentShaderIndex].set("radius1", 10.0); // Adjust radii here
-      customShaders[currentShaderIndex].set("radius2", 5.0);
+      customShaders[currentShaderIndex].set("radius2", 1.0);
     } else if (currentShaderIndex == 7) {
       customShaders[currentShaderIndex].set("threshold", 0.2); // Adjust threshold for edge-preserving filter
     }

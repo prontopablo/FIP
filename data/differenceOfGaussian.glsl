@@ -5,8 +5,8 @@ precision mediump int;
 
 uniform sampler2D texture;
 uniform vec2 resolution;
-uniform float radius1;
-uniform float radius2;
+uniform float radius1 = 10.0;
+uniform float radius2 = 1.0;
 
 void main() {
     vec2 st = gl_FragCoord.xy / resolution;
