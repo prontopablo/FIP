@@ -1,4 +1,4 @@
-PShader[] customShaders = new PShader[10]; // Array to hold custom shaders
+PShader[] customShaders = new PShader[11]; // Array to hold custom shaders
 String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Laplacian Filter", "Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors" };
 int currentShaderIndex = 0; // Index to keep track of the current shader
 PImage lucio;
