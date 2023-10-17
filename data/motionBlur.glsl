@@ -31,3 +31,5 @@ void main(void) {
   // Set the output color with the original vertex color
   gl_FragColor = blurredColor * vertColor;
 }
+
+// Followed: https://www.geeksforgeeks.org/opencv-motion-blur-in-python/

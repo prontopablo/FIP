@@ -39,3 +39,5 @@ void main() {
     
     gl_FragColor = vec4(resultColor, 1.0) * vertColor;
 }
+
+// Tutorial followed: https://www.geeksforgeeks.org/laplacian-filter-using-matlab/

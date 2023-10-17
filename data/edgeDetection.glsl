@@ -13,7 +13,7 @@ varying vec4 vertTexCoord;
 
 void main() {
     vec2 tc = vertTexCoord.st;
-    float threshold = 0.2; // Adjust this threshold to control edge sensitivity
+    float threshold = 0.2; // Threshold to control edge sensitivity
     
     // Sample the surrounding pixels
     vec4 centerColor = texture2D(texture, tc);
@@ -35,3 +35,5 @@ void main() {
     // Output the edge-detected color
     gl_FragColor = edgeColor * vertColor;
 }
+
+// Followed https://www.youtube.com/watch?v=lOEBsQodtEQ

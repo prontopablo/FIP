@@ -35,3 +35,5 @@ void main() {
 
     gl_FragColor = dog;
 }
+
+// Algorithm followed: https://theailearner.com/2019/05/13/difference-of-gaussians-dog/
