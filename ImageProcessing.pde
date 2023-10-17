@@ -35,10 +35,10 @@ void draw() {
     if (currentShaderIndex == 1) { // Apply motion blur shader
       customShaders[currentShaderIndex].set("texOffset", 1.0 / width, 1.0 / height);
       customShaders[currentShaderIndex].set("blurAmount", 5.0);
-    } else if (currentShaderIndex == 5) {
+    } else if (currentShaderIndex == 4) {
       customShaders[currentShaderIndex].set("radius1", 10.0); // Adjust radii here
       customShaders[currentShaderIndex].set("radius2", 1.0);
-    } else if (currentShaderIndex == 7) {
+    } else if (currentShaderIndex == 6) {
       customShaders[currentShaderIndex].set("threshold", 0.2); // Adjust threshold for edge-preserving filter
     }
     filter(customShaders[currentShaderIndex]);
@@ -62,10 +62,6 @@ void keyPressed() {
   else if (keyCode == RIGHT) {
     currentShaderIndex = (currentShaderIndex + 1) % customShaders.length;
   }
-  // Add this condition to reset to the built-in shader when the end of the custom shaders is reached.
-  if (currentShaderIndex == customShaders.length) {
-    currentShaderIndex = 0; // Reset to the built-in shader
-    println("Using built-in shader");
-  }
+ 
   println("Using: " + shaderNames[currentShaderIndex]);
 }
