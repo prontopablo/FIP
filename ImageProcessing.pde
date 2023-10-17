@@ -1,6 +1,8 @@
-PShader[] customShaders = new PShader[9]; // Array to hold custom shaders
+PShader[] customShaders = new PShader[10]; // Array to hold custom shaders
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Laplacian Filter", "Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors" };
 int currentShaderIndex = 0; // Index to keep track of the current shader
 PImage lucio;
+PImage venice;
 
 void setup() {
   size(1000, 1000, P2D);
@@ -13,7 +15,11 @@ void setup() {
   customShaders[6] = loadShader("unsharpMasking.glsl");
   customShaders[7] = loadShader("edgePreservingFilter.glsl");
   customShaders[8] = loadShader("grayscale.glsl");
+  customShaders[9] = loadShader("flip.glsl");
+  customShaders[10] = loadShader("invertColors.glsl");
+  println("Using: " + shaderNames[currentShaderIndex]);
   lucio = loadImage("lucio.jpg");
+  venice = loadImage("venice.jpg");
   stroke(255, 0, 0);
   rectMode(CENTER);
 }
@@ -21,7 +27,8 @@ void setup() {
 void draw() {
   // Start measuring time
   int startTime = millis();
-  image(lucio, 0, 0, width, height);
+  // image(lucio, 0, 0, width, height);
+  image(venice, 0, 0, width, height);
   // Apply the currently selected shader
   if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
     if (currentShaderIndex == 1) { // Apply motion blur shader
@@ -34,8 +41,6 @@ void draw() {
       customShaders[currentShaderIndex].set("threshold", 0.2); // Adjust threshold for edge-preserving filter
     }
     filter(customShaders[currentShaderIndex]);
-  } else {
-    filter(BLUR); // Default to built-in blur
   }
 
   // Draw shapes
@@ -51,17 +56,15 @@ void keyPressed() {
   // Use the left arrow key to cycle to the previous shader
   if (keyCode == LEFT) {
     currentShaderIndex = (currentShaderIndex - 1 + customShaders.length) % customShaders.length;
-    println("Using custom shader: " + (currentShaderIndex + 1));
   }
   // Use the right arrow key to cycle to the next shader
   else if (keyCode == RIGHT) {
     currentShaderIndex = (currentShaderIndex + 1) % customShaders.length;
-    println("Using custom shader: " + (currentShaderIndex + 1));
   }
-
   // Add this condition to reset to the built-in shader when the end of the custom shaders is reached.
   if (currentShaderIndex == customShaders.length) {
     currentShaderIndex = 0; // Reset to the built-in shader
     println("Using built-in shader");
   }
+  println("Using: " + shaderNames[currentShaderIndex]);
 }
