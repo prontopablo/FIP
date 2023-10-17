@@ -36,4 +36,4 @@ void main() {
     gl_FragColor = edgeColor * vertColor;
 }
 
-// Followed https://www.youtube.com/watch?v=lOEBsQodtEQ
+// Followed: https://www.youtube.com/watch?v=lOEBsQodtEQ

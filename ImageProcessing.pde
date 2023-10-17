@@ -39,12 +39,12 @@ void draw() {
   }
 
   // Draw shapes
-  //rect(mouseX, mouseY, 350, 350);
-  //ellipse(mouseX, mouseY, 300, 300);
+  // rect(mouseX, mouseY, 350, 350);
+  // ellipse(mouseX, mouseY, 300, 300);
 
   // End measuring time
   int endTime = millis();
-  //println("Time taken: " + (endTime - startTime) + " ms");
+  // println("Time taken: " + (endTime - startTime) + " ms");
 }
 
 void keyPressed() {
