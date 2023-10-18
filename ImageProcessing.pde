@@ -1,5 +1,5 @@
-PShader[] customShaders = new PShader[12]; // Array to hold custom shaders
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette" };
+PShader[] customShaders = new PShader[13]; // Array to hold custom shaders
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization" };
 int currentShaderIndex = 0; // Index to keep track of the current shader
 PImage lucio;
 PImage venice;
@@ -18,6 +18,7 @@ void setup() {
   customShaders[9] = loadShader("invertColors.glsl");
   customShaders[10] = loadShader("erosion.glsl");
   customShaders[11] = loadShader("vignette.glsl");
+  customShaders[12] = loadShader("quantization.glsl");
   println("Using: " + shaderNames[currentShaderIndex]);
   lucio = loadImage("lucio.jpg");
   venice = loadImage("venice.jpg");
