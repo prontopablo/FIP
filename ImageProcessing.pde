@@ -1,11 +1,12 @@
-PShader[] customShaders = new PShader[13]; // Array to hold custom shaders
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization" };
+PShader[] customShaders = new PShader[14]; // Array to hold custom shaders
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone" };
 int currentShaderIndex = 0; // Index to keep track of the current shader
 PImage lucio;
 PImage venice;
 
 void setup() {
   size(1000, 1000, P2D);
+  
   customShaders[0] = loadShader("gaussianBlur.glsl"); // Example blur (takes no parameters)
   customShaders[1] = loadShader("motionBlur.glsl");
   customShaders[2] = loadShader("edgeDetection.glsl");
@@ -19,8 +20,10 @@ void setup() {
   customShaders[10] = loadShader("erosion.glsl");
   customShaders[11] = loadShader("vignette.glsl");
   customShaders[12] = loadShader("quantization.glsl");
+  customShaders[13] = loadShader("halftone.glsl");
+
   println("Using: " + shaderNames[currentShaderIndex]);
-  lucio = loadImage("lucio.jpg");
+  // lucio = loadImage("lucio.jpg");
   venice = loadImage("venice.jpg");
   stroke(255, 0, 0);
   rectMode(CENTER);
@@ -41,6 +44,11 @@ void draw() {
       customShaders[currentShaderIndex].set("radius2", 1.0);
     } else if (currentShaderIndex == 6) {
       customShaders[currentShaderIndex].set("threshold", 0.2); // Adjust threshold for edge-preserving filter
+    } else if (currentShaderIndex == 12) {
+      customShaders[currentShaderIndex].set("shades", 4.0); // set shades per color channel
+    } else if (currentShaderIndex == 13) {
+      customShaders[currentShaderIndex].set("cellSize", 10.0);
+      customShaders[currentShaderIndex].set("threshold", 0.5);
     }
     filter(customShaders[currentShaderIndex]);
   }
@@ -63,6 +71,6 @@ void keyPressed() {
   else if (keyCode == RIGHT) {
     currentShaderIndex = (currentShaderIndex + 1) % customShaders.length;
   }
- 
+
   println("Using: " + shaderNames[currentShaderIndex]);
 }

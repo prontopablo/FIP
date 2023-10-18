@@ -8,7 +8,7 @@ uniform sampler2D texture;
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
 
-float shades = 8.0; // Adjust the number of shades per color channel
+uniform float shades = 8.0; // Shades per color channel
 
 void main() {
     // Sample the original texture color
