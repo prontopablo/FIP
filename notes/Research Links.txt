@@ -1,0 +1,9 @@
+https://github.com/diwi/PixelFlow
+
+https://lygia.xyz/
+
+https://github.com/SableRaf/Filters4Processing
+
+https://github.com/Milchreis/processing-imageprocessing
+
+https://github.com/genekogan/Processing-Shader-Examples
