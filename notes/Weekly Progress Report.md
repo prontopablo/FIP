@@ -1,7 +1,7 @@
 ### Week Starting 16/10/23
 #
-- Created comparison of current libraries table & notes
-- Created a library (See Library Notes.md)
+- Created [comparison of current libraries](Comparison%20of%20Image%20Processing%20Libraries.md)
+- Created a [library](Library%20Notes.md)
 - Reorganised project folder and switched to .md files
 #
 ### Week Starting 09/10/23
