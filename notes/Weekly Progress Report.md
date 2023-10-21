@@ -3,6 +3,9 @@
 - Created [comparison of current libraries](Comparison%20of%20Image%20Processing%20Libraries.md)
 - Created a [library](Library%20Notes.md)
 - Reorganised project folder and switched to .md files
+
+- Pixelate 
+- Sharpen
 #
 ### Week Starting 09/10/23
 #  
