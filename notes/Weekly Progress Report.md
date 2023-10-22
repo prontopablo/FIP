@@ -4,6 +4,7 @@
 - Created a [library](Library%20Notes.md)
 - Reorganised project folder and switched to .md files
 ###
+- Emboss
 - Pixelate 
 - Sharpen
 - Rotate
