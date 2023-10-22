@@ -7,8 +7,8 @@ precision mediump int;
 
 uniform sampler2D texture;
 uniform vec2 resolution;
-uniform float cellSize = 10.0;
-uniform float threshold = 0.5; // Threshold to determine if the pixel is inside the dot
+uniform float cellSize = 20.0;
+uniform float threshold = 0.8; // Threshold to determine if the pixel is inside the dot
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;

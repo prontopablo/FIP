@@ -1,5 +1,5 @@
-PShader[] customShaders = new PShader[16]; // Array to hold custom shaders
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen" };
+PShader[] customShaders = new PShader[18]; // Array to hold custom shaders
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon" };
 int currentShaderIndex = 0; // Index to keep track of the current shader
 PImage lucio;
 PImage venice;
@@ -9,7 +9,7 @@ void setup() {
   
   customShaders[0] = loadShader("gaussianBlur.glsl"); // Example blur (takes no parameters)
   customShaders[1] = loadShader("motionBlur.glsl");
-  customShaders[2] = loadShader("edgeDetection.glsl");
+  customShaders[2] = loadShader("sobelEdgeDetection.glsl");
   customShaders[3] = loadShader("laplacianEdgeEnhancement.glsl");
   customShaders[4] = loadShader("differenceOfGaussian.glsl");
   customShaders[5] = loadShader("unsharpMasking.glsl");
@@ -23,10 +23,12 @@ void setup() {
   customShaders[13] = loadShader("halftone.glsl");
   customShaders[14] = loadShader("pixelate.glsl");
   customShaders[15] = loadShader("sharpen.glsl");
+  customShaders[16] = loadShader("rotate.glsl");
+  customShaders[17] = loadShader("cartoon.glsl");
 
   println("Using: " + shaderNames[currentShaderIndex]);
-  // lucio = loadImage("lucio.jpg");
-  venice = loadImage("venice.jpg");
+  lucio = loadImage("lucio.jpg");
+  // venice = loadImage("venice.jpg");
   stroke(255, 0, 0);
   rectMode(CENTER);
 }
@@ -34,8 +36,8 @@ void setup() {
 void draw() {
   // Start measuring time
   int startTime = millis();
-  // image(lucio, 0, 0, width, height);
-  image(venice, 0, 0, width, height);
+  image(lucio, 0, 0, width, height);
+  // image(venice, 0, 0, width, height);
   // Apply the currently selected shader
   if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
     if (currentShaderIndex == 1) { // Apply motion blur shader
