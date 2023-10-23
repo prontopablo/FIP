@@ -1,5 +1,5 @@
-PShader[] customShaders = new PShader[19]; // Array to hold custom shaders
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss" };
+PShader[] customShaders = new PShader[20]; // Array to hold custom shaders
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom" };
 int currentShaderIndex = 0; // Index to keep track of the current shader
 boolean useFilter = true;
 PImage lucio;
@@ -27,6 +27,7 @@ void setup() {
   customShaders[16] = loadShader("rotate.glsl");
   customShaders[17] = loadShader("cartoon.glsl");
   customShaders[18] = loadShader("emboss.glsl");
+  customShaders[19] = loadShader("bloom.glsl");
 
   println("Using: " + shaderNames[currentShaderIndex]);
   lucio = loadImage("lucio.jpg");
