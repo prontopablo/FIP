@@ -1,13 +1,16 @@
 PShader[] customShaders = new PShader[20]; // Array to hold custom shaders
 String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom" };
+PImage[] images = new PImage[3];
 int currentShaderIndex = 0; // Index to keep track of the current shader
+int currentImageIndex = 0;
 boolean useFilter = true;
 PImage lucio;
 PImage venice;
+PImage koala;
 
 void setup() {
   size(1000, 1000, P2D);
-  
+
   customShaders[0] = loadShader("gaussianBlur.glsl"); // Example blur (takes no parameters)
   customShaders[1] = loadShader("motionBlur.glsl");
   customShaders[2] = loadShader("sobelEdgeDetection.glsl");
@@ -29,9 +32,11 @@ void setup() {
   customShaders[18] = loadShader("emboss.glsl");
   customShaders[19] = loadShader("bloom.glsl");
 
+  images[0] = loadImage("lucio.jpg");
+  images[1] = loadImage("venice.jpg");
+  images[2] = loadImage("koala.jpg");
+
   println("Using: " + shaderNames[currentShaderIndex]);
-  lucio = loadImage("lucio.jpg");
-  venice = loadImage("venice.jpg");
   stroke(255, 0, 0);
   rectMode(CENTER);
 }
@@ -39,8 +44,7 @@ void setup() {
 void draw() {
   // Start measuring time
   int startTime = millis();
-  // image(lucio, 0, 0, width, height);
-  image(venice, 0, 0, width, height);
+  image(images[currentImageIndex], 0, 0, width, height);
   // Apply the currently selected shader
   if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
     if (currentShaderIndex == 1) { // Apply motion blur shader
@@ -56,9 +60,9 @@ void draw() {
     } else if (currentShaderIndex == 13) {
       customShaders[currentShaderIndex].set("cellSize", 10.0);
       customShaders[currentShaderIndex].set("threshold", 0.5);
-    } 
-    if (useFilter == true){
-    filter(customShaders[currentShaderIndex]);
+    }
+    if (useFilter == true) {
+      filter(customShaders[currentShaderIndex]);
     }
   }
 
@@ -72,16 +76,23 @@ void draw() {
 }
 
 void keyPressed() {
-  // Use the left arrow key to cycle to the previous shader
+  // Use left and right arrow keys to cycle shaders
   if (keyCode == LEFT) {
     currentShaderIndex = (currentShaderIndex - 1 + customShaders.length) % customShaders.length;
-  }
-  // Use the right arrow key to cycle to the next shader
-  else if (keyCode == RIGHT) {
+    println("Using: " + shaderNames[currentShaderIndex]);
+  } else if (keyCode == RIGHT) {
     currentShaderIndex = (currentShaderIndex + 1) % customShaders.length;
-  }
-  else if (key == 'x') {
+    println("Using: " + shaderNames[currentShaderIndex]);
+  } else if (keyCode == DOWN) {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  } else if (keyCode == UP) {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+  } else if (key == 'x') {
     useFilter = !useFilter;
+    if (!useFilter) {
+      println("No filter");
+    } else {
+      println("Using: " + shaderNames[currentShaderIndex]);
+    }
   }
-  println("Using: " + shaderNames[currentShaderIndex]);
 }
