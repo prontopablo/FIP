@@ -26,6 +26,26 @@ void draw() {
     ip.applyShader(); // Apply the shader
 }
 ```
+An alternative way of setting up the library would involve manipulating the images directly:
+```processing
+import imageProcessing.*; // Import the library
+PImage venice;
+
+void setup() {
+    size(1000, 1000, P2D);
+    EdgeDetectionFilter.loadShader(this);
+    venice = loadImage("venice.jpg");
+}
+
+void draw() {
+    background(255);
+
+    PImage processedImage = EdgeDetectionFilter.apply(this, venice);
+
+    image(processedImage, 0, 0, width, height);
+}
+
+```
 
 3) Setting parameters would look something like:
 ```processing
