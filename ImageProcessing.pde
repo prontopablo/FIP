@@ -1,7 +1,7 @@
-PShader[] customShaders = new PShader[20]; // Array to hold custom shaders
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom" };
+PShader[] customShaders = new PShader[21];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold" };
 PImage[] images = new PImage[3];
-int currentShaderIndex = 0; // Index to keep track of the current shader
+int currentShaderIndex = 0;
 int currentImageIndex = 0;
 boolean useFilter = true;
 PImage lucio;
@@ -11,7 +11,7 @@ PImage koala;
 void setup() {
   size(1000, 1000, P2D);
 
-  customShaders[0] = loadShader("gaussianBlur.glsl"); // Example blur (takes no parameters)
+  customShaders[0] = loadShader("gaussianBlur.glsl");
   customShaders[1] = loadShader("motionBlur.glsl");
   customShaders[2] = loadShader("sobelEdgeDetection.glsl");
   customShaders[3] = loadShader("laplacianEdgeEnhancement.glsl");
@@ -31,6 +31,7 @@ void setup() {
   customShaders[17] = loadShader("cartoon.glsl");
   customShaders[18] = loadShader("emboss.glsl");
   customShaders[19] = loadShader("bloom.glsl");
+  customShaders[20] = loadShader("threshold.glsl");
 
   images[0] = loadImage("lucio.jpg");
   images[1] = loadImage("venice.jpg");

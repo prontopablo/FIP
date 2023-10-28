@@ -1,9 +1,10 @@
-### Week Starting 16/10/23
+### 16/10/23 - 30/10/23
 #
 - Created [comparison of current libraries](Comparison%20of%20Image%20Processing%20Libraries.md)
 - Created a [library](Library%20Notes.md)
 - Reorganised project folder and switched to .md files
 ###
+- Threshold
 - Bloom
 - Emboss
 - Pixelate 
