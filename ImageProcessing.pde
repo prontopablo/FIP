@@ -1,5 +1,5 @@
-PShader[] customShaders = new PShader[21];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold" };
+PShader[] customShaders = new PShader[22];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Cel Shading" };
 PImage[] images = new PImage[3];
 int currentShaderIndex = 0;
 int currentImageIndex = 0;
@@ -9,7 +9,7 @@ PImage venice;
 PImage koala;
 
 void setup() {
-  size(1000, 1000, P2D);
+  size(1000, 1000, P3D);
 
   customShaders[0] = loadShader("gaussianBlur.glsl");
   customShaders[1] = loadShader("motionBlur.glsl");
@@ -32,6 +32,7 @@ void setup() {
   customShaders[18] = loadShader("emboss.glsl");
   customShaders[19] = loadShader("bloom.glsl");
   customShaders[20] = loadShader("threshold.glsl");
+  customShaders[21] = loadShader("celShading.glsl");
 
   images[0] = loadImage("lucio.jpg");
   images[1] = loadImage("venice.jpg");
@@ -66,10 +67,6 @@ void draw() {
       filter(customShaders[currentShaderIndex]);
     }
   }
-
-  // Draw shapes
-  // rect(mouseX, mouseY, 350, 350);
-  // ellipse(mouseX, mouseY, 300, 300);
 
   // End measuring time
   int endTime = millis();
