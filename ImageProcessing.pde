@@ -1,5 +1,5 @@
 PShader[] customShaders = new PShader[22];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Cel Shading" };
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Paint Stroke" };
 PImage[] images = new PImage[3];
 int currentShaderIndex = 0;
 int currentImageIndex = 0;
@@ -32,7 +32,7 @@ void setup() {
   customShaders[18] = loadShader("emboss.glsl");
   customShaders[19] = loadShader("bloom.glsl");
   customShaders[20] = loadShader("threshold.glsl");
-  customShaders[21] = loadShader("celShading.glsl");
+  customShaders[21] = loadShader("paintStroke.glsl");
 
   images[0] = loadImage("lucio.jpg");
   images[1] = loadImage("venice.jpg");
