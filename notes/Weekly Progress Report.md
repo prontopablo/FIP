@@ -1,5 +1,7 @@
 ### Week Starting 13/11/23
 #
+- Canny Edge Detection
+- Cubify
 - Blend
 #
 

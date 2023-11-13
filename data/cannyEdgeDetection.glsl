@@ -7,7 +7,8 @@ precision mediump int;
 
 uniform sampler2D texture;
 uniform vec2 texOffset;
-uniform float threshold = 0.2;
+uniform float thresholdLow = 0.1;
+uniform float thresholdHigh = 0.3;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
@@ -30,10 +31,13 @@ void main() {
     float edgeIntensity = sqrt(horizontalGradient * horizontalGradient + verticalGradient * verticalGradient);
     
     // Apply the threshold to highlight edges
-    vec4 edgeColor = edgeIntensity > threshold ? vec4(1.0, 1.0, 1.0, 1.0) : vec4(0.0, 0.0, 0.0, 1.0);
+    vec4 edgeColor = edgeIntensity > thresholdLow ? vec4(1.0, 1.0, 1.0, 1.0) : vec4(0.0, 0.0, 0.0, 1.0);
+    
+    // Perform hysteresis to link edges
+    edgeColor = edgeColor * (edgeIntensity > thresholdHigh ? 1.0 : 0.0);
     
     // Output the edge-detected color
     gl_FragColor = edgeColor * vertColor;
 }
 
-// Followed: https://www.youtube.com/watch?v=lOEBsQodtEQ
+// Adapted from https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/CannyEdgeDetector.java
