@@ -1,3 +1,8 @@
+### Week Starting 13/11/23
+#
+- Blend
+#
+
 ### 16/10/23 - 30/10/23
 #
 - Created [comparison of current libraries](Comparison%20of%20Image%20Processing%20Libraries.md)
