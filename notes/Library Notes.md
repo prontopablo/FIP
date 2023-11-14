@@ -26,7 +26,7 @@ void draw() {
 }
 ```
 *Note:*
-There is a decision to be made whether to automatically initialise the library to reduce the amount of code needed to use it. This would make the library less intimidating for beginners but for large projects this would be inefficient as we may want to control when our libraries are initialised.
+There is a decision to be made whether to automatically initialise the library to reduce the amount of code needed to use it. This would make the library less intimidating for beginners but for large projects this would be inefficient as we may want to control when our libraries are initialised. Another option is to just have the glsl files in the library and have no need to initialise it.
 <br>
 
 An alternative way of setting up the library would involve manipulating the images directly:
