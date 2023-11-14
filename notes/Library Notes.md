@@ -1,5 +1,5 @@
 # Library Notes
-I've created a working Processing library using the official library template. Using the library would look something like this:
+I've created a Processing library using the official library template. Using the library would look something like this:
 1) If the library was accepted by the Processing Foundation, users could install the library from the library manager.
 2) Users would then import the library into their sketch and initialize it. They then load the shader in setup() and apply it in draw() (as seen below).
 
@@ -13,7 +13,6 @@ void setup() {
     size(1000, 1000, P2D);
     ip = new ImageProcessing(this); // Initialize library
 
-    // Load an image
     venice = loadImage("venice.jpg");
 
     ip.loadShader(); // Load the shader
@@ -26,6 +25,10 @@ void draw() {
     ip.applyShader(); // Apply the shader
 }
 ```
+*Note:*
+There is a decision to be made whether to automatically initialise the library to reduce the amount of code needed to use it. This would make the library less intimidating for beginners but for large projects this would be inefficient as we may want to control when our libraries are initialised.
+<br>
+
 An alternative way of setting up the library would involve manipulating the images directly:
 ```processing
 import imageProcessing.*; // Import the library
@@ -59,3 +62,4 @@ void draw() {
     ip.parameters.put("param2", 0.8);
     ip.setShaderParameters(parameters);
 ```
+
