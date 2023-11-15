@@ -1,8 +1,18 @@
 # Comparison of Image Processing Libraries
 
-## Overview
+### Overview
 
 When considering the purpose of the project, it's important to evaluate current solutions and their features, ease of use, and availability. Below is a comparison of several image processing libraries for use with Processing:
+
+![Alt text](image.png)
+<div style="text-align:center;"><i>Table 1: Overview of Existing Image Processing Libraries for p5</i>
+</div>
+
+<br>
+
+![Alt text](image-1.png)
+<div style="text-align:center;"><i>Table 2: Comparison of Functions by Library</i>
+</div>
 
 ## PixelFlow
 
@@ -26,44 +36,14 @@ When considering the purpose of the project, it's important to evaluate current 
 - These libraries offer tutorials and examples but are generally less relevant to advanced image processing tasks.
 
 <br>
+<br>
+<br>
 
 ## Documentation
 
-- **Reference Documentation**: None of the libraries provide reference documentation for shaders, making it challenging for users to look up shader usage and parameters.
+- **Reference Documentation**: PixelFlow is again at the forefront and provides the best documentation, with generated javadocs and a sample sketch. However, it is still not possible to easily search for a filter and see an example. The documentation the other libraries provide is limited or it is contained in code comments within GLSL files, making it challenging for users to look up shader usage and parameters.
 
 ## Recommendations
 
-- **Primary Recommendation**: PixelFlow is the closest equivalent to the proposed project due to its features, ease of use, and availability through the Processing Library Manager.
-- **Alternative Options**: Artists seeking more diverse options can explore other shader libraries with Processing wrappers such as Lygia, OpenCV, and ShaderToy.
-
-<br>
-
-## PixelFlow Features
-
-PixelFlow offers the following image processing operations:
-
-- Box Blur
-- Binomial Blur
-- Gauss Blur
-- Gauss Blur Pyramid
-- Median
-- Bilateral Filter
-- Custom Convolution Kernel
-- DoG (Difference of Gaussian)
-- Background Subtraction
-- Difference - Laplace
-- Sobel
-- Gamma Correction
-- Luminance
-- Thresholding
-- Harris Corner Detection
-- Optical Flow - Bloom
-- Depth of Field (DoF)
-- Liquid FX Filter
-- Summed Area Table (SAT)
-- Distance Transform (Jumpflood), Voronoi, Distance Map
-- Min/Max (global)
-- Min/Max (local)
-- Merge Shader
-- FlowField
-- Line Integral Convolution (LIC) / Streamlines
+- **Primary Recommendation**: PixelFlow is the closest equivalent to the proposed project due to its features and its availability through the Processing Library Manager.
+- **Alternative Options**: Artists seeking more diverse options can explore other shader libraries with Processing wrappers such as Lygia, OpenCV, and ShaderToy. This is a larger overhead, with more technical knowledge required. An artist would have to find the shader they wanted to use on a website like ShaderToy or OpenCV. They would then have to bring that shader into their sketch and use the appropriate wrapper provided by a library.
