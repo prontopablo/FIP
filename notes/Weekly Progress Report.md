@@ -2,6 +2,7 @@
 #
 - Started adding notes at the top of each shader for descriptions and credit.
 ###
+- Glitch
 - Sepia
 - Canny Edge Detection
 - Cubify

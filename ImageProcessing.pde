@@ -1,7 +1,7 @@
 // TODO: Glitch, warp
 
-PShader[] customShaders = new PShader[25];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia" };
+PShader[] customShaders = new PShader[26];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia", "Glitch" };
 PImage[] images = new PImage[3];
 int currentShaderIndex = 0;
 int currentImageIndex = 0;
@@ -38,6 +38,7 @@ void setup() {
   customShaders[22] = loadShader("cubify.glsl");
   customShaders[23] = loadShader("cannyEdgeDetection.glsl");
   customShaders[24] = loadShader("sepia.glsl");
+  customShaders[25] = loadShader("glitch.glsl");
 
   images[0] = loadImage("lucio.jpg");
   images[1] = loadImage("venice.jpg");
@@ -73,6 +74,8 @@ void draw() {
       customShaders[currentShaderIndex].set("mixFactor", 0.5);
     } else if (currentShaderIndex == 23) {
       customShaders[currentShaderIndex].set("thresholdLow", 0.2);
+    } else if (currentShaderIndex == 25) {
+      customShaders[currentShaderIndex].set("mouse", float(mouseX), float(mouseY));
     }
     if (useFilter == true) {
       filter(customShaders[currentShaderIndex]);
