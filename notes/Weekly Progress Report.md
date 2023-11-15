@@ -1,5 +1,8 @@
 ### Week Starting 13/11/23
 #
+- Started adding notes at the top of each shader for descriptions and credit.
+###
+- Sepia
 - Canny Edge Detection
 - Cubify
 - Blend

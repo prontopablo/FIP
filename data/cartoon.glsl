@@ -5,6 +5,11 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+  Adds a cartoon effect to the image
+  Followed: https://docs.gimp.org/en/gimp-filter-cartoon.html
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 
@@ -33,5 +38,3 @@ void main(void) {
     gl_FragColor = centerColor;
   }
 }
-
-// Followed: https://docs.gimp.org/en/gimp-filter-cartoon.html

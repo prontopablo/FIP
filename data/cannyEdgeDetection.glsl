@@ -5,6 +5,11 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+  Canny Edge Detector (https://en.wikipedia.org/wiki/Canny_edge_detector)
+  Adapted from https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/CannyEdgeDetector.java
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 uniform float thresholdLow = 0.1;
@@ -39,5 +44,3 @@ void main() {
     // Output the edge-detected color
     gl_FragColor = edgeColor * vertColor;
 }
-
-// Adapted from https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/CannyEdgeDetector.java

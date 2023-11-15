@@ -1,5 +1,5 @@
-PShader[] customShaders = new PShader[24];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection" };
+PShader[] customShaders = new PShader[25];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia" };
 PImage[] images = new PImage[3];
 int currentShaderIndex = 0;
 int currentImageIndex = 0;
@@ -35,6 +35,7 @@ void setup() {
   customShaders[21] = loadShader("blend.glsl");
   customShaders[22] = loadShader("cubify.glsl");
   customShaders[23] = loadShader("cannyEdgeDetection.glsl");
+  customShaders[24] = loadShader("sepia.glsl");
 
   images[0] = loadImage("lucio.jpg");
   images[1] = loadImage("venice.jpg");
@@ -51,16 +52,16 @@ void draw() {
   image(images[currentImageIndex], 0, 0, width, height);
   // Apply the currently selected shader
   if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
-    if (currentShaderIndex == 1) { // Apply motion blur shader
+    if (currentShaderIndex == 1) {
       customShaders[currentShaderIndex].set("texOffset", 1.0 / width, 1.0 / height);
       customShaders[currentShaderIndex].set("blurAmount", 5.0);
     } else if (currentShaderIndex == 4) {
-      customShaders[currentShaderIndex].set("radius1", 10.0); // Adjust radii here
+      customShaders[currentShaderIndex].set("radius1", 10.0);
       customShaders[currentShaderIndex].set("radius2", 1.0);
     } else if (currentShaderIndex == 6) {
-      customShaders[currentShaderIndex].set("threshold", 0.2); // Adjust threshold for edge-preserving filter
+      customShaders[currentShaderIndex].set("threshold", 0.2); 
     } else if (currentShaderIndex == 12) {
-      customShaders[currentShaderIndex].set("shades", 4.0); // set shades per color channel
+      customShaders[currentShaderIndex].set("shades", 4.0); 
     } else if (currentShaderIndex == 13) {
       customShaders[currentShaderIndex].set("cellSize", 10.0);
       customShaders[currentShaderIndex].set("threshold", 0.5);

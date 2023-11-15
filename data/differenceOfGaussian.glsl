@@ -3,6 +3,11 @@ precision mediump float;
 precision mediump int;
 #endif
 
+/*
+  Difference of Gaussian (https://en.wikipedia.org/wiki/Difference_of_Gaussians)
+  Algorithm followed: https://theailearner.com/2019/05/13/difference-of-gaussians-dog/
+*/
+
 uniform sampler2D texture;
 uniform vec2 resolution;
 uniform float radius1 = 10.0;
@@ -35,5 +40,3 @@ void main() {
 
     gl_FragColor = dog;
 }
-
-// Algorithm followed: https://theailearner.com/2019/05/13/difference-of-gaussians-dog/

@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/* 
+  Accidentally created in attempting to create dilation shader
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 
@@ -31,5 +35,3 @@ void main(void) {
 
     gl_FragColor *= vertColor;
 }
-
-// Accidentally created in attempting to create dilation shader

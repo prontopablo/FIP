@@ -3,6 +3,11 @@ precision mediump float;
 precision mediump int;
 #endif
 
+/*
+   Adds a glow effect to the image (https://learnopengl.com/Advanced-Lighting/Bloom)
+   Adapted from: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/Bloom.java
+*/
+
 uniform sampler2D texture;
 uniform float intensity = 0.5;
 uniform float glow = 0.0;
@@ -41,4 +46,3 @@ void main(void) {
   gl_FragColor = bloom * vertColor;
 }
 
-// Adapted from: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/Bloom.java
