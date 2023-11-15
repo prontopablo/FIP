@@ -4,13 +4,13 @@
 
 When considering the purpose of the project, it's important to evaluate current solutions and their features, ease of use, and availability. Below is a comparison of several image processing libraries for use with Processing:
 
-![Alt text](image.png)
+![Alt text](OverviewComparisonTable.png)
 <div style="text-align:center;"><i>Table 1: Overview of Existing Image Processing Libraries for p5</i>
 </div>
 
 <br>
 
-![Alt text](image-1.png)
+![Alt text](FunctionComparisonTable.png)
 <div style="text-align:center;"><i>Table 2: Comparison of Functions by Library</i>
 </div>
 
