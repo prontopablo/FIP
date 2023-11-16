@@ -1,8 +1,12 @@
-// TODO: Glitch, warp
+// TODO: Warp
 
-PShader[] customShaders = new PShader[26];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia", "Glitch" };
+import processing.video.*;
+
+PShader[] customShaders = new PShader[27];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter" };
 PImage[] images = new PImage[3];
+Capture video;
+
 int currentShaderIndex = 0;
 int currentImageIndex = 0;
 boolean useFilter = true;
@@ -11,8 +15,11 @@ PImage venice;
 PImage koala;
 
 void setup() {
-  size(1000, 1000, P3D);
-
+  size(1800, 1000, P3D);
+  
+  video = new Capture(this, width, height);
+  video.start();
+  
   customShaders[0] = loadShader("gaussianBlur.glsl");
   customShaders[1] = loadShader("motionBlur.glsl");
   customShaders[2] = loadShader("sobelEdgeDetection.glsl");
@@ -39,20 +46,26 @@ void setup() {
   customShaders[23] = loadShader("cannyEdgeDetection.glsl");
   customShaders[24] = loadShader("sepia.glsl");
   customShaders[25] = loadShader("glitch.glsl");
-
+  customShaders[26] = loadShader("bilateral.glsl");
+  
   images[0] = loadImage("lucio.jpg");
   images[1] = loadImage("venice.jpg");
   images[2] = loadImage("koala.jpg");
 
   println("Using: " + shaderNames[currentShaderIndex]);
-  stroke(255, 0, 0);
-  rectMode(CENTER);
 }
 
 void draw() {
   // Start measuring time
   int startTime = millis();
-  image(images[currentImageIndex], 0, 0, width, height);
+  
+  if (video.available()) {
+    video.read();
+  }
+  
+  image(video, 0, 0, width, height);
+  
+  // image(images[currentImageIndex], 0, 0, width, height);
   // Apply the currently selected shader
   if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
     if (currentShaderIndex == 1) {
