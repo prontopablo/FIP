@@ -5,7 +5,7 @@ import processing.video.*;
 PShader[] customShaders = new PShader[27];
 String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter" };
 PImage[] images = new PImage[3];
-Capture video;
+// Capture video;
 
 int currentShaderIndex = 0;
 int currentImageIndex = 0;
@@ -15,10 +15,10 @@ PImage venice;
 PImage koala;
 
 void setup() {
-  size(1800, 1000, P3D);
+  size(1000, 1000, P3D);
   
-  video = new Capture(this, width, height);
-  video.start();
+  // video = new Capture(this, width, height);
+  // video.start();
   
   customShaders[0] = loadShader("gaussianBlur.glsl");
   customShaders[1] = loadShader("motionBlur.glsl");
@@ -59,13 +59,13 @@ void draw() {
   // Start measuring time
   int startTime = millis();
   
-  if (video.available()) {
-    video.read();
-  }
+  // if (video.available()) {
+   // video.read();
+ // }
   
-  image(video, 0, 0, width, height);
+  // image(video, 0, 0, width, height);
   
-  // image(images[currentImageIndex], 0, 0, width, height);
+  image(images[currentImageIndex], 0, 0, width, height);
   // Apply the currently selected shader
   if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
     if (currentShaderIndex == 1) {
