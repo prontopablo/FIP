@@ -1,12 +1,13 @@
 # Introduction
 In the landscape of creative coding, Processing stands out as a versatile platform. Processing is a free integrated development environment (IDE) designed to cater to the needs of artists, designers, and creative coders. It streamlines the development of visual applications by providing a comprehensive set of functions. These include capabilities for drawing graphics, managing user input, and creating animations. 
 
-There are several existing image processing libraries for Processing. However, real-time post-processing requires efficiency, flexibility, and an expansive array of effects. Upon analysing the landscape of existing solutions, it becomes evident that the current offerings, while commendable, leave room for enhancement.
+There are several existing image processing libraries for Processing. However, many applications require efficiency, flexibility, and an expansive array of effects. Upon analysing the landscape of existing solutions, it becomes evident that the current offerings, while commendable, leave room for enhancement.
 
 ## Motivation
-This project aims to address the issues in existing image-processing libraries for Processing. This will be achieved by introducing a comprehensive, hardware-accelerated image processing library. There are three key objectives: to significantly improve performance by leveraging shaders for real-time post-processing, to create a comprehensive set of post-processing operations to enable artists and developers, and to augment user experience through flexible usage and detailed documentation.
+This project aims to address the issues in existing image-processing libraries for Processing. This will be achieved by introducing a comprehensive, hardware-accelerated image processing library.
 
 ## Research Question / Project Objectives
+There are three key objectives: to significantly improve performance by leveraging shaders for real-time post-processing, to create a comprehensive set of post-processing operations to enable artists and developers, and to augment user experience through flexible usage and detailed documentation.
 
 ## Outline of the Project Work
 
