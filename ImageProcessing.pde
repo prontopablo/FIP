@@ -12,6 +12,10 @@ PImage lucio;
 PImage venice;
 PImage koala;
 
+float cameraX = 100;
+float cameraY = 0;
+float cameraZ = -100;
+
 void setup() {
   size(1000, 1000, P3D);
   
@@ -49,12 +53,12 @@ void setup() {
   images[0] = loadImage("lucio.jpg");
   images[1] = loadImage("venice.jpg");
   images[2] = loadImage("koala.jpg");
-
+  
   println("Using: " + shaderNames[currentShaderIndex]);
 }
 
 void draw() {
-  background(0);
+  background(128);
   // Start measuring time
   int startTime = millis();
   
@@ -66,8 +70,7 @@ void draw() {
   
   // image(images[currentImageIndex], 0, 0, width, height);
   
-  // Draw ground
-  drawGround();
+  camera(cameraX, cameraY, cameraZ, width/2, height/2, 0, 0, 1, 0);
   
   // Draw rotating boxes
   drawRotatingBoxes();
@@ -103,7 +106,8 @@ void draw() {
 
   // End measuring time
   int endTime = millis();
-  println("Time taken: " + (endTime - startTime) + " ms");
+  // println("Time taken: " + (endTime - startTime) + " ms");
+  // println("camX: " + cameraX + " " + "camY: " + cameraY + "camZ: " + cameraZ);
 }
 
 void keyPressed() {
@@ -125,33 +129,19 @@ void keyPressed() {
     } else {
       println("Using: " + shaderNames[currentShaderIndex]);
     }
+  }  else if (keyCode == 'W' || keyCode == 'w') {
+    // Move camera forward
+    cameraZ -= 100;
+  } else if (keyCode == 'S' || keyCode == 's') {
+    // Move camera backward
+    cameraZ += 100;
+  } else if (keyCode == 'A' || keyCode == 'a') {
+    // Move camera left
+    cameraX -= 100;
+  } else if (keyCode == 'D' || keyCode == 'd') {
+    // Move camera right
+    cameraX += 100;
   }
-}
-
-void drawGround() {
-  // Use texture for ground
-  PGraphics textureGraphics = createGraphics(width, height);
-  textureGraphics.beginDraw();
-  textureGraphics.background(200);
-  textureGraphics.stroke(0);
-  textureGraphics.strokeWeight(2);
-  textureGraphics.noFill();
-  textureGraphics.translate(textureGraphics.width / 2, textureGraphics.height / 2);
-  textureGraphics.rotateX(HALF_PI);
-  textureGraphics.box(800, 800, 1);
-  textureGraphics.endDraw();
-  
-  // Set ground texture
-  texture(textureGraphics);
-  
-  // Draw ground plane
-  pushMatrix();
-  translate(width / 2, height / 2, 0);
-  rotateX(HALF_PI);
-  popMatrix();
-  
-  // Reset texture to avoid affecting other elements
-  resetShader();
 }
 
 void drawRotatingBoxes() {
@@ -165,9 +155,10 @@ void drawRotatingBoxes() {
     float y = sin(angle) * spacing;
     
     pushMatrix();
-    translate(width / 2 + x, height / 2 + y, sin(millis() * 0.002 + angle) * 100);
+    translate(width / 2 + x, height / 2 + y, sin(millis() * 0.001 + angle) * 100);
     rotateX(frameCount * 0.02);
     rotateY(frameCount * 0.03);
+    fill(255,255,0);
     box(50);
     popMatrix();
   }
