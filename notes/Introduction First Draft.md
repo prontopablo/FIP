@@ -1,4 +1,6 @@
 # Introduction
+_Introduce Processing or assume knowledge?_ ***
+
 In the landscape of creative coding, Processing stands out as a versatile platform. Processing is a free integrated development environment (IDE) designed to cater to the needs of artists, designers, and creative coders. It streamlines the development of visual applications by providing a comprehensive set of functions. These include capabilities for drawing graphics, managing user input, and creating animations. 
 
 There are several existing image processing libraries for Processing. However, many applications require efficiency, flexibility, and an expansive array of effects. Upon analysing the landscape of existing solutions, it becomes evident that the current offerings, while commendable, leave room for enhancement.
