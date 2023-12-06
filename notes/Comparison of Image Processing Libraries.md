@@ -10,9 +10,13 @@ When considering the purpose of the project, it's important to evaluate current 
 
 <br>
 
-![Alt text](FunctionComparisonTable.png)
+![Alt text](FunctionComparisonTable.jpg)
 <div style="text-align:center;"><i>Table 2: Comparison of Functions by Library</i>
 </div>
+
+<br>
+*Both tables to be converted to LaTeX*
+<br>
 
 ## PixelFlow
 

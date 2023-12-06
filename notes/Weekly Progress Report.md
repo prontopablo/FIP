@@ -1,3 +1,8 @@
+### Week Starting 04/12/23
+#
+- Updated [table comparing library functionality](FunctionComparisonTable.jpg)
+
+#
 ### Week Starting 27/11/23
 #
 - Created [Introduction First Draft](Introduction%20First%20Draft.md)
@@ -5,7 +10,7 @@
 #
 ### Week Starting 20/11/23
 #
-- Created [table comparing library functionality](FunctionComparisonTable.png)
+- Created [table comparing library functionality](FunctionComparisonTable.jpg)
 - Created [3D demo](https://www.youtube.com/watch?v=PWXdbIyUZIo) 
 #
 ### Week Starting 13/11/23
