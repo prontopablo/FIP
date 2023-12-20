@@ -1,7 +1,7 @@
 // import processing.video.*;
 
-PShader[] customShaders = new PShader[27];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter" };
+PShader[] customShaders = new PShader[29];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT" };
 PImage[] images = new PImage[3];
 // Capture video;
 
@@ -49,6 +49,8 @@ void setup() {
   customShaders[24] = loadShader("sepia.glsl");
   customShaders[25] = loadShader("glitch.glsl");
   customShaders[26] = loadShader("bilateral.glsl");
+  customShaders[27] = loadShader("sketch.glsl");
+  customShaders[28] = loadShader("crt.glsl");
   
   images[0] = loadImage("lucio.jpg");
   images[1] = loadImage("venice.jpg");
@@ -68,12 +70,12 @@ void draw() {
   
   // image(video, 0, 0, width, height);
   
-  // image(images[currentImageIndex], 0, 0, width, height);
+  image(images[currentImageIndex], 0, 0, width, height);
   
-  camera(cameraX, cameraY, cameraZ, width/2, height/2, 0, 0, 1, 0);
+  // camera(cameraX, cameraY, cameraZ, width/2, height/2, 0, 0, 1, 0);
   
   // Draw rotating boxes
-  drawRotatingBoxes();
+  // drawRotatingBoxes();
   
   // Apply the currently selected shader
   if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
