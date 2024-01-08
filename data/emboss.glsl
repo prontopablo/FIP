@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Followed: https://www.eclipse.org/articles/Article-SimpleImageEffectsForSWT/index.html
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 
@@ -29,5 +33,3 @@ void main(void) {
     // Set the output color with the original vertex color
     gl_FragColor = embossColor * vertColor;
 }
-
-// Followed: https://www.eclipse.org/articles/Article-SimpleImageEffectsForSWT/index.html

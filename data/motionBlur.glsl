@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Followed: https://www.geeksforgeeks.org/opencv-motion-blur-in-python/
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 uniform float blurAmount = 10.0; // Default amount of motion blur
@@ -31,5 +35,3 @@ void main(void) {
   // Set the output color with the original vertex color
   gl_FragColor = blurredColor * vertColor;
 }
-
-// Followed: https://www.geeksforgeeks.org/opencv-motion-blur-in-python/

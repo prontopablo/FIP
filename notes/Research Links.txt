@@ -1,3 +1,14 @@
+Processing PShader reference: https://processing.org/reference/PShader.html
+
+Troubleshooting: https://www.reddit.com/r/processing/comments/ritpd8/shaders_in_processing/
+
+PShader tutorial: https://web.archive.org/web/20210117181532/https://processing.org/tutorials/pshader/
+
+Processing image processing libraries referenced:
+https://atduskgreg.github.io/Processing-Shader-Examples/
+
+https://github.com/ElementMo/ComputeShader
+
 https://github.com/diwi/PixelFlow
 
 https://lygia.xyz/

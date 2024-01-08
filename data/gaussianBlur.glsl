@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Gaussian blur taken directly from Processing example
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 
@@ -36,5 +40,3 @@ varying vec4 vertTexCoord;
               1.0 * col6 + 2.0 * col7 + 1.0 * col8) / 16.0;            
   gl_FragColor = vec4(sum.rgb, 1.0) * vertColor;  
 }
-
-// Gaussian blur taken directly from Processing example

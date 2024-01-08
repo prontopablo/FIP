@@ -6,6 +6,7 @@ precision mediump int;
 #define PROCESSING_TEXTURE_SHADER
 
 /*
+    Bilateral Filter: https://en.wikipedia.org/wiki/Bilateral_filter
     Followed: https://github.com/diwi/PixelFlow/blob/master/src/com/thomasdiewald/pixelflow/glsl/Filter/bilateral.frag
 */
 

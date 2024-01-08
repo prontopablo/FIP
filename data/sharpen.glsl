@@ -6,6 +6,12 @@ precision mediump int;
 uniform sampler2D texture;
 uniform vec2 resolution;
 
+#define PROCESSING_TEXTURE_SHADER
+
+/*
+    
+*/
+
 // Sharpening intensity
 uniform float factor = 1.5;
 

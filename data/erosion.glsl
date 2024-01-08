@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Followed: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/Erosion.java#L25
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 
@@ -36,5 +40,3 @@ void main(void) {
 
   gl_FragColor = vec4(minVal, minVal, minVal, centerColor.a) * vertColor;
 }
-
-// Adapted from: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/Erosion.java#L25

@@ -3,20 +3,28 @@ precision mediump float;
 precision mediump int;
 #endif
 
+#define PROCESSING_TEXTURE_SHADER
+
+/*
+   
+*/
+
 uniform sampler2D texture;
-uniform vec2 resolution;
-uniform float pixelSize = 200.0; // Adjust the pixel size
+uniform vec2 texOffset;
+uniform float pixelSize = 0.01;
+
+varying vec4 vertColor;
+varying vec4 vertTexCoord;
 
 void main() {
-    vec2 st = gl_FragCoord.xy / resolution;
+    vec2 tc = vertTexCoord.st;
     
-    // Calculate the position within the pixel block
-    vec2 pixelPos = floor(st * pixelSize) / pixelSize;
+    // Calculate the position in the pixel grid
+    vec2 pixelPos = vec2(floor(tc.x / pixelSize) * pixelSize, floor(tc.y / pixelSize) * pixelSize);
     
-    // Sample the color within the pixel block
-    vec4 color = texture2D(texture, pixelPos);
+    // Sample the color at the pixel position
+    vec4 pixelColor = texture2D(texture, pixelPos);
     
-    gl_FragColor = color;
+    // Output the pixelated color
+    gl_FragColor = pixelColor * vertColor;
 }
-
-

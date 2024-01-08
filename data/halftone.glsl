@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Followed: https://stackoverflow.com/questions/1258047/algorithm-to-make-halftone-images
+*/
+
 uniform sampler2D texture;
 uniform vec2 resolution;
 uniform float cellSize = 20.0;
@@ -42,5 +46,3 @@ void main() {
         gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }
 }
-
-// Followed: https://stackoverflow.com/questions/1258047/algorithm-to-make-halftone-images

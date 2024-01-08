@@ -6,7 +6,7 @@ precision mediump int;
 #define PROCESSING_TEXTURE_SHADER
 
 /*
-  Blends two textures together based on a mix factor
+    Blends two textures together based on a mix factor
 */
 
 uniform sampler2D texture1;

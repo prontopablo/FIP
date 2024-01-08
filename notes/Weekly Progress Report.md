@@ -1,3 +1,15 @@
+### Week Starting 08/01/24
+#
+- Contrast
+- Gamma
+- Dithering
+###
+- Added comment header for every shader
+- Adjusted default values for every shader
+- Updated research links and restructured project files.
+- Added this library to library comparison table.
+#
+
 ### Week Starting 18/12/23
 #
 - Sketch

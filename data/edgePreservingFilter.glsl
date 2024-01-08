@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Followed: https://www.youtube.com/watch?v=ZoaEDbivmOE
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 uniform float threshold; // Adjust the threshold as needed
@@ -42,5 +46,3 @@ void main(void) {
   // If the difference is greater than the threshold, keep the original pixel color; otherwise, use the local average
   gl_FragColor = mix(localAverage, col4, step(threshold, length(difference.rgb))) * vertColor;
 }
-
-// Followed: https://www.youtube.com/watch?v=ZoaEDbivmOE

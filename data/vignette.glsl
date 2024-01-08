@@ -5,13 +5,17 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
 
-uniform float vignetteStrength = 0.5; // Strength of the vignette effect, 0.0 (none) to 1.0 (maximum)
+uniform float vignetteStrength = 0.8; // Strength of the vignette effect, 0.0 (none) to 1.0 (maximum)
 
 void main(void) {
   vec2 texSize = textureSize(texture, 0);

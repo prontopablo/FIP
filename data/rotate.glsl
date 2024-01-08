@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Followed: https://stackoverflow.com/questions/484573/image-rotation-algorithm
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 uniform float rotationAngleDegrees = 45.0; // Rotation angle in degrees
@@ -30,5 +34,3 @@ void main() {
         gl_FragColor = texture2D(texture, vec2(rotatedX, rotatedY)) * vertColor;
     }
 }
-
-// Followed: https://stackoverflow.com/questions/484573/image-rotation-algorithm

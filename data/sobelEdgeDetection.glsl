@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Followed: https://www.youtube.com/watch?v=lOEBsQodtEQ
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 uniform float threshold = 0.2;
@@ -35,5 +39,3 @@ void main() {
     // Output the edge-detected color
     gl_FragColor = edgeColor * vertColor;
 }
-
-// Followed: https://www.youtube.com/watch?v=lOEBsQodtEQ

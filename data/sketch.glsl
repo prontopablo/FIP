@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 uniform float threshold = 0.15;

@@ -3,6 +3,12 @@ precision mediump float;
 precision mediump int;
 #endif
 
+#define PROCESSING_TEXTURE_SHADER
+
+/*
+    Followed: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/Threshold.java
+*/
+
 uniform sampler2D texture;
 uniform float threshold = 0.5; // Adjust this threshold value
 
@@ -22,5 +28,3 @@ void main(void) {
     // Set the output color with the original vertex color
     gl_FragColor = resultColor * vertColor;
 }
-
-// Adapted from: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/Threshold.java

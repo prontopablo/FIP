@@ -3,6 +3,12 @@ precision mediump float;
 precision mediump int;
 #endif
 
+#define PROCESSING_TEXTURE_SHADER
+
+/*
+    Adapted from: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/Quantization.java
+*/
+
 uniform sampler2D texture;
 
 varying vec4 vertColor;
@@ -22,6 +28,3 @@ void main() {
     // Set the output color with the quantized color and the original alpha value
     gl_FragColor = vec4(r, g, b, originalColor.a) * vertColor;
 }
-
-
-// Adapted from: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/Quantization.java

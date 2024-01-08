@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Followed: https://www.educative.io/answers/what-is-unsharp-masking
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 uniform float strength = 2.0; // Adjust the strength of the sharpening effect
@@ -27,5 +31,3 @@ void main(void) {
     
     gl_FragColor = sharpenedColor * vertColor;
 }
-
-// Tutorial provided by: https://www.educative.io/answers/what-is-unsharp-masking

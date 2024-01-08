@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Followed: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/Flip.java
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset; // Texture offset (used for flipping)
 
@@ -21,5 +25,3 @@ void main(void) {
   // Set the output color with the original vertex color
   gl_FragColor = flippedColor * vertColor;
 }
-
-// Followed: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/Flip.java

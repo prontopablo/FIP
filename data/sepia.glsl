@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Followed: https://stackoverflow.com/questions/36434905/processing-an-image-to-sepia-tone-in-python
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 
@@ -26,5 +30,3 @@ void main() {
     // Output the sepia-toned color
     gl_FragColor = vec4(sepiaColor, color.a) * vertColor;
 }
-
-// Followed: https://stackoverflow.com/questions/36434905/processing-an-image-to-sepia-tone-in-python

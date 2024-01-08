@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Tutorial followed and values provided by: https://tannerhelland.com/2011/10/01/grayscale-image-algorithm-vb6.html#:~:text=All%20grayscale%20algorithms%20use%20the,with%20the%20new%20gray%20value
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 
@@ -21,5 +25,3 @@ void main(void) {
   // Create a grayscale color by using the grayscale value for all color channels
   gl_FragColor = vec4(vec3(gray), color.a) * vertColor;
 }
-
-// Tutorial followed and values provided by: https://tannerhelland.com/2011/10/01/grayscale-image-algorithm-vb6.html#:~:text=All%20grayscale%20algorithms%20use%20the,with%20the%20new%20gray%20value

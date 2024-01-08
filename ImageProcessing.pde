@@ -1,7 +1,7 @@
-// import processing.video.*;
+  // import processing.video.*;
 
-PShader[] customShaders = new PShader[29];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT" };
+PShader[] customShaders = new PShader[32];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma" };
 PImage[] images = new PImage[3];
 // Capture video;
 
@@ -51,6 +51,9 @@ void setup() {
   customShaders[26] = loadShader("bilateral.glsl");
   customShaders[27] = loadShader("sketch.glsl");
   customShaders[28] = loadShader("crt.glsl");
+  customShaders[29] = loadShader("contrast.glsl");
+  customShaders[30] = loadShader("dithering.glsl");
+  customShaders[31] = loadShader("gamma.glsl");
   
   images[0] = loadImage("lucio.jpg");
   images[1] = loadImage("venice.jpg");
