@@ -1,8 +1,11 @@
 ### Week Starting 08/01/24
 #
 - Contrast
+- Saturation
 - Gamma
+- Mosaic
 - Dithering
+- Kuwahara
 ###
 - Added comment header for every shader
 - Adjusted default values for every shader
