@@ -4,6 +4,7 @@
 - Saturation
 - Gamma
 - Mosaic
+- Static
 - Dithering
 - Kuwahara
 ###

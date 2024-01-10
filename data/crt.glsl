@@ -6,7 +6,8 @@ precision mediump int;
 #define PROCESSING_TEXTURE_SHADER
 
 /*
-  Recreates the effects of an old CRT television
+  Recreates the effects of an old CRT television with visible scanlines, spherical warping, and vignette
+  Followed: https://www.youtube.com/watch?v=aWdySZ0BtJs
 */
 
 uniform sampler2D texture;
@@ -15,6 +16,7 @@ uniform float thresholdLow = 0.1;
 uniform float thresholdHigh = 0.3;
 uniform float scanlineWeight = 0.1;
 uniform float brightness = 2.5; // Add a brightness uniform
+uniform float distortion = 0.02;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
@@ -42,14 +44,23 @@ void main() {
     // Perform hysteresis to link edges
     edgeColor = edgeColor * (edgeIntensity > thresholdHigh ? 1.0 : 0.0);
     
-    // Apply CRT effect
+    // Apply scanlines effect
     float offset = 0.002; // Adjust this value for the desired CRT effect
-    vec2 distortedUV = vec2(tc.x + sin(tc.y * 20.0) * offset, tc.y);
+    
+    // Calculate spherical warp
+    float distanceToCenter = length(tc - vec2(0.5, 0.5));
+    vec2 warpOffset = normalize(tc - vec2(0.5, 0.5)) * pow(distanceToCenter, 2.0) * distortion;
+    vec2 distortedUV = tc + sin(tc.y * 20.0) * offset + warpOffset;
+    
     vec4 crtColor = texture2D(texture, distortedUV);
     crtColor.rgb -= crtColor.rgb * smoothstep(0.5 - scanlineWeight, 0.5 + scanlineWeight, mod(gl_FragCoord.y, 2.0));
 
     // Adjust brightness
     crtColor *= brightness;
+
+    // Add a slight vignette effect
+    float vignetteFactor = 1.0 - 0.5 * pow(distanceToCenter, 2.0);
+    crtColor *= vignetteFactor;
 
     // Output the CRT-processed color
     gl_FragColor = crtColor * vertColor;

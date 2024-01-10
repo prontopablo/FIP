@@ -6,15 +6,21 @@ precision mediump int;
 #define PROCESSING_TEXTURE_SHADER
 
 /*
-    Sketch shader using sobel operator for edge detection    
+    Static shader using sobel operator for edge detection and stippling    
 */
 
 uniform sampler2D texture;
 uniform vec2 texOffset;
-uniform float threshold = 0.15;
+uniform float threshold = 0.08;
+uniform float stippleDensity = 0.99;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
+
+// Function to generate a random number between 0 and 1
+float rand(vec2 co) {
+    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);
+}
 
 void main() {
     vec2 tc = vertTexCoord.st;
@@ -36,6 +42,10 @@ void main() {
     // Apply the threshold to create ink-like effect
     vec4 inkColor = edgeIntensity > threshold ? vec4(0.0, 0.0, 0.0, 1.0) : vec4(1.0, 1.0, 1.0, 1.0);
 
-    // Output the ink drawing color
+    // Stippling: Add random dots to the ink color
+    float stipple = rand(tc);
+    inkColor.rgb *= smoothstep(1.0 - stippleDensity, 1.0, stipple);
+
+    // Output the stippled ink drawing color
     gl_FragColor = inkColor * vertColor;
 }
