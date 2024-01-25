@@ -102,6 +102,7 @@ void draw() {
       customShaders[currentShaderIndex].set("texture1", images[0]);
       customShaders[currentShaderIndex].set("texture2", images[1]);
       customShaders[currentShaderIndex].set("mixFactor", 0.5);
+      customShaders[currentShaderIndex].set("blendingMode", 1);
     } else if (currentShaderIndex == 23) {
       customShaders[currentShaderIndex].set("thresholdLow", 0.2);
     } else if (currentShaderIndex == 25) {

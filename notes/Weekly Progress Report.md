@@ -1,3 +1,9 @@
+### Week Starting 22/01/24
+#
+- Updated blend to have multiple modes
+
+#
+
 ### Week Starting 08/01/24
 #
 - Contrast
