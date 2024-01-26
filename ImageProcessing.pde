@@ -1,11 +1,13 @@
-  // import processing.video.*;
+// import processing.video.*;
 
-PShader[] customShaders = new PShader[39];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform" };
+// https://github.com/kajott/GIPS/blob/main/shaders/Distort/Swirl.glsl
+
+PShader[] customShaders = new PShader[40];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Dot", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform", "Ripple" };
 PImage[] images = new PImage[3];
 // Capture video;
 
-int currentShaderIndex = 21;
+int currentShaderIndex = 39;
 int currentImageIndex = 0;
 int blendingMode = 0;
 boolean useFilter = true;
@@ -45,7 +47,7 @@ void setup() {
   customShaders[19] = loadShader("bloom.glsl");
   customShaders[20] = loadShader("threshold.glsl");
   customShaders[21] = loadShader("blend.glsl");
-  customShaders[22] = loadShader("cubify.glsl");
+  customShaders[22] = loadShader("dot.glsl");
   customShaders[23] = loadShader("cannyEdgeDetection.glsl");
   customShaders[24] = loadShader("sepia.glsl");
   customShaders[25] = loadShader("glitch.glsl");
@@ -62,6 +64,7 @@ void setup() {
   customShaders[36] = loadShader("dilate.glsl");
   customShaders[37] = loadShader("brightness.glsl");
   customShaders[38] = loadShader("deform.glsl");
+  customShaders[39] = loadShader("ripple.glsl");
 
   images[0] = loadImage("lucio.jpg");
   images[1] = loadImage("venice.jpg");
@@ -75,13 +78,13 @@ void draw() {
   // Start measuring time
   int startTime = millis();
   
-  //if (video.available()) {
-  // video.read();
-  //}
+  if (video.available()) {
+    video.read();
+  }
   
-  // image(video, 0, 0, width, height);
+  image(video, 0, 0, width, height);
   
-  image(images[currentImageIndex], 0, 0, width, height);
+  // image(images[currentImageIndex], 0, 0, width, height);
   
   // camera(cameraX, cameraY, cameraZ, width/2, height/2, 0, 0, 1, 0);
   
