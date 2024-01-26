@@ -78,13 +78,13 @@ void draw() {
   // Start measuring time
   int startTime = millis();
   
-  if (video.available()) {
-    video.read();
-  }
+  //if (video.available()) {
+  //  video.read();
+  //}
   
-  image(video, 0, 0, width, height);
+  // image(video, 0, 0, width, height);
   
-  // image(images[currentImageIndex], 0, 0, width, height);
+  image(images[currentImageIndex], 0, 0, width, height);
   
   // camera(cameraX, cameraY, cameraZ, width/2, height/2, 0, 0, 1, 0);
   

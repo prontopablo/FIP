@@ -10,7 +10,7 @@ precision mediump int;
 #define PROCESSING_TEXTURE_SHADER
 
 uniform sampler2D texture;
-uniform float brightness = 0.1;
+uniform float brightness = 0.7;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
