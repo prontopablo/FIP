@@ -3,7 +3,7 @@
 - Updated blend to have multiple (11) modes
 - Updated Contrast to clamp color output between 0.0 and 1.0
 - Updated Vignette to have 3 additional parameters
-- Removed cubify due to aritifacts on other GPUs - See []
+- Removed cubify due to aritifacts on other GPUs - [Screenshot](https://github.com/prontopablo/Image-Processing-Library/blob/main/notes/Progress%20Screenshots/cubifyPrecision.png)
 
 ###
 - Box Blur
