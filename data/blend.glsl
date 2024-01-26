@@ -5,7 +5,8 @@ precision mediump int;
 
 /*
    Blends textures together based on a mix factor and blending type.
-   (https://en.wikipedia.org/wiki/Blend_modes)
+   https://en.wikipedia.org/wiki/Blend_modes
+   https://processing.org/reference/blendMode_.html
 */
 
 #define PROCESSING_TEXTURE_SHADER
@@ -26,7 +27,6 @@ void main(void) {
     vec4 color2 = texture2D(texture2, flippedTexCoord);
     vec4 blendedColor;
 
-    // Use a switch statement to select the blending mode
     switch (blendingMode) {
         case 1:
             blendedColor = color1 + color2 * mixFactor; // Additive Blending
@@ -35,10 +35,28 @@ void main(void) {
             blendedColor = color1 - color2 * mixFactor; // Subtract Blending
             break;
         case 3:
-            blendedColor = color1 * color2 * mixFactor; // Multiplication Blending
+            blendedColor = color1 * color2 * mixFactor; // Multiplicative Blending
             break;
         case 4:
-            blendedColor = (1 - (1 - color1) * (1 - color2)) * mixFactor;
+            blendedColor = 1.0 - (1.0 - color1) * (1.0 - color2) * mixFactor; // Screen Blending
+            break;
+        case 5:
+            blendedColor = mix(2.0 * color1 * color2, 1.0 - 2.0 * (1.0 - color1) * (1.0 - color2), step(0.5, color1)); // Overlay Blending
+            break;
+        case 6:
+            blendedColor = min(color1, color2) * mixFactor; // Darken Blending
+            break;
+        case 7:
+            blendedColor = max(color1, color2) * mixFactor; // Lighten Blending
+            break;
+        case 8:
+            blendedColor = abs(color1 - color2) * mixFactor; // Difference Blending
+            break;
+        case 9:
+            blendedColor = color1 + color2 - 2.0 * color1 * color2 * mixFactor; // Exclusion Blending
+            break;
+        case 10:
+            blendedColor = color2; // Replace Blending
             break;
         default:
             blendedColor = mix(color1, color2, mixFactor); // Linear Interpolation

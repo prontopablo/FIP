@@ -1,6 +1,18 @@
 ### Week Starting 22/01/24
 #
-- Updated blend to have multiple modes
+- Updated blend to have multiple (11) modes
+- Updated Contrast to clamp color output between 0.0 and 1.0
+###
+- Box Blur
+- Brightness
+- Deform
+- Dilate
+
+#
+
+### Week Starting 15/01/24
+#
+- Interim Report
 
 #
 

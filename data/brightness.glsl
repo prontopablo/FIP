@@ -3,14 +3,14 @@ precision mediump float;
 precision mediump int;
 #endif
 
-#define PROCESSING_TEXTURE_SHADER
-
 /*
-    Contrast
+   Brightness
 */
 
+#define PROCESSING_TEXTURE_SHADER
+
 uniform sampler2D texture;
-uniform float contrast = 2.0;
+uniform float brightness = 0.1;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
@@ -21,8 +21,8 @@ void main() {
     // Sample the pixel color
     vec4 color = texture2D(texture, tc);
 
-    // Adjust contrast
-    color.rgb = (color.rgb - 0.5) * contrast + 0.5;
+    // Adjust brightness
+    color.rgb = color.rgb * brightness;
 
     color.rgb = clamp(color.rgb, 0.0, 1.0);
 

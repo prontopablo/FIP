@@ -1,12 +1,13 @@
   // import processing.video.*;
 
-PShader[] customShaders = new PShader[35];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static" };
+PShader[] customShaders = new PShader[39];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Cubify", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform" };
 PImage[] images = new PImage[3];
 // Capture video;
 
-int currentShaderIndex = 0;
+int currentShaderIndex = 21;
 int currentImageIndex = 0;
+int blendingMode = 0;
 boolean useFilter = true;
 PImage lucio;
 PImage venice;
@@ -57,6 +58,10 @@ void setup() {
   customShaders[32] = loadShader("kuwahara.glsl");
   customShaders[33] = loadShader("saturation.glsl");
   customShaders[34] = loadShader("static.glsl");
+  customShaders[35] = loadShader("boxBlur.glsl");
+  customShaders[36] = loadShader("dilate.glsl");
+  customShaders[37] = loadShader("brightness.glsl");
+  customShaders[38] = loadShader("deform.glsl");
 
   images[0] = loadImage("lucio.jpg");
   images[1] = loadImage("venice.jpg");
@@ -102,7 +107,7 @@ void draw() {
       customShaders[currentShaderIndex].set("texture1", images[0]);
       customShaders[currentShaderIndex].set("texture2", images[1]);
       customShaders[currentShaderIndex].set("mixFactor", 0.5);
-      customShaders[currentShaderIndex].set("blendingMode", 1);
+      customShaders[currentShaderIndex].set("blendingMode", blendingMode);
     } else if (currentShaderIndex == 23) {
       customShaders[currentShaderIndex].set("thresholdLow", 0.2);
     } else if (currentShaderIndex == 25) {
@@ -115,6 +120,7 @@ void draw() {
 
   // End measuring time
   int endTime = millis();
+  // println(frameRate);
   // println("Time taken: " + (endTime - startTime) + " ms");
   // println("camX: " + cameraX + " " + "camY: " + cameraY + "camZ: " + cameraZ);
 }
@@ -138,7 +144,12 @@ void keyPressed() {
     } else {
       println("Using: " + shaderNames[currentShaderIndex]);
     }
-  }  else if (keyCode == 'W' || keyCode == 'w') {
+  } else if (key == 'B' || key == 'b') {
+    // Cycle through blending modes
+    blendingMode = (blendingMode + 1) % 11; // 11 is the total number of blending modes
+    println("Blending Mode: " + blendingMode);
+  }
+  else if (keyCode == 'W' || keyCode == 'w') {
     // Move camera forward
     cameraZ -= 100;
   } else if (keyCode == 'S' || keyCode == 's') {
