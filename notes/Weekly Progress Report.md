@@ -1,5 +1,9 @@
 ### Week Starting 22/01/24
 #
+- Created Documentation website and started hosting it on GitHub Pages.
+
+###
+
 - Updated blend to have multiple (11) modes
 - Updated Contrast to clamp color output between 0.0 and 1.0
 - Updated Vignette to have 3 additional parameters

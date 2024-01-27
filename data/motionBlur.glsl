@@ -11,7 +11,7 @@ precision mediump int;
 
 uniform sampler2D texture;
 uniform vec2 texOffset;
-uniform float blurAmount = 10.0; // Default amount of motion blur
+uniform float blurAmount = 10.0;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;

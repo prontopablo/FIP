@@ -4,16 +4,14 @@
 
 PShader[] customShaders = new PShader[40];
 String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Dot", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform", "Ripple" };
-PImage[] images = new PImage[3];
+PImage[] images = new PImage[2];
+
 // Capture video;
 
 int currentShaderIndex = 39;
 int currentImageIndex = 0;
 int blendingMode = 0;
 boolean useFilter = true;
-PImage lucio;
-PImage venice;
-PImage koala;
 
 float cameraX = 100;
 float cameraY = 0;
@@ -66,10 +64,9 @@ void setup() {
   customShaders[38] = loadShader("deform.glsl");
   customShaders[39] = loadShader("ripple.glsl");
 
-  images[0] = loadImage("lucio.jpg");
-  images[1] = loadImage("venice.jpg");
-  images[2] = loadImage("koala.jpg");
-  
+  images[0] = loadImage("ireland.jpg");
+  images[1] = loadImage("bird.jpg");
+    
   println("Using: " + shaderNames[currentShaderIndex]);
 }
 
@@ -95,7 +92,6 @@ void draw() {
   if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
     if (currentShaderIndex == 1) {
       customShaders[currentShaderIndex].set("texOffset", 1.0 / width, 1.0 / height);
-      customShaders[currentShaderIndex].set("blurAmount", 5.0);
     } else if (currentShaderIndex == 4) {
       customShaders[currentShaderIndex].set("radius1", 10.0);
       customShaders[currentShaderIndex].set("radius2", 1.0);

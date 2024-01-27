@@ -14,9 +14,7 @@ precision mediump int;
 uniform sampler2D texture1;
 uniform sampler2D texture2;
 uniform float mixFactor = 0.5;
-
-// Specify the blending mode
-uniform int blendingMode;
+uniform int blendingMode = 1;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
