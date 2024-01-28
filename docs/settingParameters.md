@@ -19,9 +19,9 @@ void setup() {
 }
 
 void draw() {
-    filter(motionBlur);
+    image(ireland, 0, 0, width, height); 
 
-    image(ireland, 0, 0, width, height);
+    filter(motionBlur);
 }
 ```
 

@@ -20,9 +20,9 @@ void setup() {
 }
 
 void draw() {
-    filter(glitch); // Apply the glitch shader
-
     image(ireland, 0, 0, width, height);
+
+    filter(glitch); // Apply the glitch shader
 }
 ```
 

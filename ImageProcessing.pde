@@ -1,7 +1,7 @@
 // import processing.video.*;
 
-PShader[] customShaders = new PShader[40];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Dot", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform", "Ripple" };
+PShader[] customShaders = new PShader[42];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Dot", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform", "Ripple", "Solarize", "Duo-tone" };
 PImage[] images = new PImage[2];
 
 // Capture video;
@@ -61,6 +61,8 @@ void setup() {
   customShaders[37] = loadShader("brightness.glsl");
   customShaders[38] = loadShader("deform.glsl");
   customShaders[39] = loadShader("ripple.glsl");
+  customShaders[40] = loadShader("solarize.glsl");
+  customShaders[41] = loadShader("duoTone.glsl");
 
   images[0] = loadImage("ireland.jpg");
   images[1] = loadImage("bird.jpg");

@@ -1,15 +1,18 @@
 ### Week Starting 22/01/24
 #
 - Created Documentation website and started hosting it on GitHub Pages.
+- Added Getting Started and Resources sections to docs, along with Blend as an example reference.
 
 ###
 
-- Updated blend to have multiple (11) modes
+- Updated blend to have multiple (14) modes
 - Updated Contrast to clamp color output between 0.0 and 1.0
 - Updated Vignette to have 3 additional parameters
 - Removed cubify due to aritifacts on other GPUs - [Screenshot](https://github.com/prontopablo/FIP/blob/main/notes/Progress%20Screenshots/cubifyPrecision.png)
 
 ###
+- Duo-tone
+- Solarize
 - Box Blur
 - Brightness
 - Deform

@@ -20,7 +20,10 @@ Blends textures together based on a mix factor and blending type.
 | 7             | Lighten Blending            |
 | 8             | Difference Blending         |
 | 9             | Exclusion Blending          |
-| 10            | Replace Blending            |
+| 10            | Behind Blending             |
+| 11            | Dissolve Blending           |
+| 12            | Hue Blending                |
+| 13            | Normal Blending             |
 | Default       | Linear Interpolation        |
 
 ## Example

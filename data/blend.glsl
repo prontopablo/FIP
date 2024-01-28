@@ -7,6 +7,7 @@ precision mediump int;
    Blends textures together based on a mix factor and blending type.
    https://en.wikipedia.org/wiki/Blend_modes
    https://processing.org/reference/blendMode_.html
+   https://tinf2.vub.ac.be/~dvermeir/manual/gimp/Grokking-the-GIMP-v1.0/node55.html
 */
 
 #define PROCESSING_TEXTURE_SHADER
@@ -54,7 +55,16 @@ void main(void) {
             blendedColor = color1 + color2 - 2.0 * color1 * color2 * mixFactor; // Exclusion Blending
             break;
         case 10:
-            blendedColor = color2; // Replace Blending
+            blendedColor = color1 * (1.0 - color2) + color2 * (1.0 - color1) * mixFactor; // Behind Blending
+            break;
+        case 11:
+            blendedColor = mix(color1, color2, mix(color1.a, 1.0 - color2.a, mixFactor)); // Dissolve Blending
+            break;
+        case 12:
+            blendedColor = vec4(abs(color1.rgb - color2.rgb), max(color1.a, color2.a)); // Hue Blending
+            break;
+        case 13:
+            blendedColor = color2; // Normal Blending
             break;
         default:
             blendedColor = mix(color1, color2, mixFactor); // Linear Interpolation

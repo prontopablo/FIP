@@ -8,3 +8,7 @@
 - Reference
 
   - [Blend](blend.md)
+
+- Resources
+
+  - [List of Resources](resources.md)

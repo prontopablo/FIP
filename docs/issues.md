@@ -27,7 +27,7 @@ void setup() {
   // blend.set("texture2", bird);
   
   blend.set("mixFactor", 0.5);
-  blend.set("blendingMode", 3);
+  blend.set("blendingMode", 0);
 }
 
 void draw() {
@@ -43,6 +43,6 @@ void draw() {
     </div>
     <div>
         <img width="400" height="400" src="./images/irelandBlend.jpg">
-        <figcaption>Image when textures are passed (the 2 commented lines)</figcaption>
+        <figcaption>Image when textures are passed</figcaption>
     </div>
 </div>
