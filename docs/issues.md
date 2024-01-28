@@ -1,7 +1,8 @@
 # Issues
+Below are some common issues people have when using FIP and how to resolve them. If your issue is not listed below, please report it [here](https://github.com/prontopablo/FIP/issues) and I'll try to help you or fix it.
 
 ## Out of date graphics drivers
-As FIP runs GLSL shaders on the GPU, make sure you update to the latest graphics drivers for your GPU ([how?](https://www.youtube.com/watch?v=NBiJSPd_K4g)), otherwise you may see some visual glitches. If your drivers are up to date but a shader still isn't working, please report it [here](https://github.com/prontopablo/FIP/issues).
+As FIP runs GLSL shaders on the GPU, make sure you update to the latest graphics drivers for your GPU ([how?](https://www.youtube.com/watch?v=NBiJSPd_K4g)), otherwise you may see some visual glitches.
 
 ## Not passing textures
 Some shaders have required parameters and will not work if these parameters are not passed into them. Below we use the _blend_ shader but fail to pass it the textures we want to blend, so it does nothing.
