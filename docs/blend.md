@@ -42,7 +42,7 @@ void setup() {
 
   blend.set("texture1", ireland); // Blend requires these 2 textures to be passed into it. 
   blend.set("texture2", bird);
-  blend.set("mixFactor", 0.5);
+  blend.set("mixFactor", 0.5); // Equally blend the images
   blend.set("blendingMode", 0); // Use linear interpolation blending
 }
 
