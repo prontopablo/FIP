@@ -1,3 +1,12 @@
+### Week Starting 29/01/24
+#
+- Linocut
+
+###
+
+- Updated duoTone default values for a stronger effect
+- Added flip direction to flip
+
 ### Week Starting 22/01/24
 #
 - Created Documentation website and started hosting it on GitHub Pages.

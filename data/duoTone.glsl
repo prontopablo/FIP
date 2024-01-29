@@ -7,6 +7,7 @@ precision mediump int;
 
 /*
     Duo-tone shader with user-defined colors.
+    Default tones taken from the 1967 Jefferson Airplane and Jimi Hendrix duotone poster by Clifford Charles Seeley
 */
 
 uniform sampler2D texture;
@@ -15,8 +16,8 @@ uniform vec2 resolution;
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
 
-uniform vec3 tone1 = vec3(0.1, 0.5, 0.8);
-uniform vec3 tone2 = vec3(0.8, 0.2, 0.1);
+uniform vec3 tone1 = vec3(0.8627, 0.6275, 0.0);
+uniform vec3 tone2 = vec3(0.4157, 0.0118, 0.5647);
 
 void main() {
     vec2 uv = vertTexCoord.st;

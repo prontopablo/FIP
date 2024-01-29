@@ -6,12 +6,13 @@ precision mediump int;
 #define PROCESSING_TEXTURE_SHADER
 
 /*
-    Static shader using sobel operator for edge detection and stippling    
+    Static shader using sobel operator for edge detection and stippling
+    Noise generation random function taken from: https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83?permalink_comment_id=2351862    
 */
 
 uniform sampler2D texture;
 uniform vec2 texOffset;
-uniform float threshold = 0.08;
+uniform float threshold = 0.05;
 uniform float stippleDensity = 0.99;
 
 varying vec4 vertColor;

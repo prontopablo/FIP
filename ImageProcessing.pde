@@ -1,12 +1,12 @@
 // import processing.video.*;
 
-PShader[] customShaders = new PShader[42];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Dot", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform", "Ripple", "Solarize", "Duo-tone" };
+PShader[] customShaders = new PShader[43];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Dot", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform", "Ripple", "Solarize", "Duo-tone", "Linocut" };
 PImage[] images = new PImage[2];
 
 // Capture video;
 
-int currentShaderIndex = 39;
+int currentShaderIndex = 8;
 int currentImageIndex = 0;
 int blendingMode = 0;
 boolean useFilter = true;
@@ -63,6 +63,7 @@ void setup() {
   customShaders[39] = loadShader("ripple.glsl");
   customShaders[40] = loadShader("solarize.glsl");
   customShaders[41] = loadShader("duoTone.glsl");
+  customShaders[42] = loadShader("linocut.glsl");
 
   images[0] = loadImage("ireland.jpg");
   images[1] = loadImage("bird.jpg");
@@ -81,12 +82,12 @@ void draw() {
   
   // image(video, 0, 0, width, height);
   
-  image(images[currentImageIndex], 0, 0, width, height);
+  // image(images[currentImageIndex], 0, 0, width, height);
   
   // camera(cameraX, cameraY, cameraZ, width/2, height/2, 0, 0, 1, 0);
   
   // Draw rotating boxes
-  // drawRotatingBoxes();
+  drawRotatingBoxes();
   
   // Apply the currently selected shader
   if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
@@ -118,7 +119,7 @@ void draw() {
   }
 
   // End measuring time
-  int endTime = millis();
+  // int endTime = millis();
   // println(frameRate);
   // println("Time taken: " + (endTime - startTime) + " ms");
   // println("camX: " + cameraX + " " + "camY: " + cameraY + "camZ: " + cameraZ);
