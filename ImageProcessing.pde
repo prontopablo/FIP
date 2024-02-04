@@ -1,13 +1,12 @@
 // import processing.video.*;
 
 PShader[] customShaders = new PShader[43];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Dot", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform", "Ripple", "Solarize", "Duo-tone", "Linocut" };
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Dot", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform", "Ripple", "Solarize", "Duo-tone", "Linocut"};
 PImage[] images = new PImage[2];
 
 // TODO:
 // https://www.youtube.com/watch?v=1poWgZWpsiY&t=1s
 // https://www.youtube.com/watch?v=NmZxWXeIjJI
-// Fix quantization shader
 
 // Capture video;
 
@@ -87,12 +86,12 @@ void draw() {
   
   // image(video, 0, 0, width, height);
   
-  // image(images[currentImageIndex], 0, 0, width, height);
+  image(images[currentImageIndex], 0, 0, width, height);
   
   // camera(cameraX, cameraY, cameraZ, width/2, height/2, 0, 0, 1, 0);
   
   // Draw rotating boxes
-  drawRotatingBoxes();
+  // drawRotatingBoxes();
   
   // Apply the currently selected shader
   if (currentShaderIndex >= 0 && currentShaderIndex < customShaders.length) {
@@ -104,7 +103,7 @@ void draw() {
     } else if (currentShaderIndex == 6) {
       customShaders[currentShaderIndex].set("threshold", 0.2); 
     } else if (currentShaderIndex == 12) {
-      customShaders[currentShaderIndex].set("shades", 4.0); 
+      customShaders[currentShaderIndex].set("shades", 4); 
     } else if (currentShaderIndex == 13) {
       customShaders[currentShaderIndex].set("cellSize", 10.0);
       customShaders[currentShaderIndex].set("threshold", 0.5);

@@ -6,6 +6,7 @@
 
 - Updated duoTone default values for a stronger effect
 - Added flip direction to flip
+- Fixed error in quantization shader logic
 
 ### Week Starting 22/01/24
 #
