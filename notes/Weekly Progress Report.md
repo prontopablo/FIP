@@ -4,7 +4,7 @@
 
 ###
 
-- Ported grayscale, flip, rotate, sepia, sharpen, saturation, gamma, brightness, pixelate, quantization to p5.js
+- Ported grayscale, flip, rotate, sepia, sharpen, saturation, gamma, brightness, pixelate, quantization, solarize to p5.js
 
 #
 
