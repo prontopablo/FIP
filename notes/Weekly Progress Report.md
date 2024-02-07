@@ -1,3 +1,13 @@
+### Week Starting 05/02/24
+#
+- Updated sharpness uniforms
+
+###
+
+- Ported grayscale, flip, rotate, sepia, sharpen, saturation to p5.js
+
+#
+
 ### Week Starting 29/01/24
 #
 - Linocut
@@ -5,7 +15,7 @@
 ###
 
 - Updated duoTone default values for a stronger effect
-- Added flip direction to flip
+- Added flip directions to flip
 - Fixed error in quantization shader logic
 
 ### Week Starting 22/01/24

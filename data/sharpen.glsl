@@ -13,7 +13,7 @@ uniform vec2 resolution;
 */
 
 // Sharpening intensity
-uniform float factor = 1.5;
+uniform float sharpness = 1.5;
 
 void main() {
     vec2 st = gl_FragCoord.xy / resolution;
@@ -28,7 +28,7 @@ void main() {
     vec4 rightColor = texture2D(texture, st + vec2(1.0, 0.0) / resolution);
 
     // Calculate the sharpened color
-    vec4 sharpenedColor = centerColor * (1.0 + 4.0 * factor) - factor * (topColor + bottomColor + leftColor + rightColor);
+    vec4 sharpenedColor = centerColor * (1.0 + 4.0 * sharpness) - sharpness * (topColor + bottomColor + leftColor + rightColor);
 
     gl_FragColor = sharpenedColor;
 }
