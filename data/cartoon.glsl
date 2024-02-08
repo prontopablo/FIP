@@ -12,6 +12,7 @@ precision mediump int;
 
 uniform sampler2D texture;
 uniform vec2 texOffset;
+uniform float edgeThreshold = 0.1;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
@@ -22,9 +23,6 @@ void main(void) {
 
   // Sample the center pixel color
   vec4 centerColor = texture2D(texture, vertTexCoord.st);
-
-  // Define a threshold to determine if a pixel is part of an edge
-  float edgeThreshold = 0.1;
 
   // Calculate the difference between the center pixel and its neighbors
   float delta = length(centerColor.rgb - texture2D(texture, tc).rgb);
