@@ -34,7 +34,7 @@ void main(void) {
     blurredColor += texture2D(texture, vertTexCoord.st + offset);
   }
 
-  blurredColor /= 17.0; // Adjust divisor as needed
+  blurredColor /= 17.0;
 
   // Apply intensity to the blurred color
   blurredColor *= intensity;

@@ -7,7 +7,7 @@ precision mediump int;
 
 uniform sampler2D texture;
 uniform vec2 texOffset;
-uniform float mosaicSize = 40.00;
+uniform float mosaicSize = 40.0;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
