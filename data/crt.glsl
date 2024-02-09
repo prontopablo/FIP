@@ -15,7 +15,7 @@ uniform vec2 texOffset;
 uniform float thresholdLow = 0.1;
 uniform float thresholdHigh = 0.3;
 uniform float scanlineWeight = 0.1;
-uniform float brightness = 2.5; // Add a brightness uniform
+uniform float brightness = 2.5;
 uniform float distortion = 0.02;
 
 varying vec4 vertColor;
@@ -45,7 +45,7 @@ void main() {
     edgeColor = edgeColor * (edgeIntensity > thresholdHigh ? 1.0 : 0.0);
     
     // Apply scanlines effect
-    float offset = 0.002; // Adjust this value for the desired CRT effect
+    float offset = 0.002;
     
     // Calculate spherical warp
     float distanceToCenter = length(tc - vec2(0.5, 0.5));

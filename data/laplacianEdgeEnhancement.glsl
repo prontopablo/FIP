@@ -17,7 +17,7 @@ varying vec4 vertTexCoord;
 
 void main() {
     vec2 tc = vertTexCoord.st;
-    float amount = 1.5; // Adjust to control the strength of enhancement
+    float amount = 1.5; // Strength of enhancement
 
     // Sample the center pixel
     vec4 centerColor = texture2D(texture, tc);

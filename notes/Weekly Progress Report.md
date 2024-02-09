@@ -4,7 +4,7 @@
 
 ###
 
-- Ported grayscale, flip, rotate, sepia, sharpen, saturation, gamma, brightness, pixelate, quantization, solarize, contrast, deform, dithering, dot, ripple, invert colors, mosaic, cartoon to p5.js
+- Ported grayscale, flip, rotate, sepia, sharpen, saturation, gamma, brightness, pixelate, quantization, solarize, contrast, deform, dithering, dot, ripple, invert colors, mosaic, cartoon, dilate to p5.js
 - Updated cartoon to have edgeThreshold parameter.
 
 #
