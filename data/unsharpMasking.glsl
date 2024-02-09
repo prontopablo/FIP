@@ -11,7 +11,7 @@ precision mediump int;
 
 uniform sampler2D texture;
 uniform vec2 texOffset;
-uniform float strength = 2.0; // Strength of the sharpening effect
+uniform float strength = 2.0; 
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;

@@ -12,7 +12,7 @@ precision mediump int;
 uniform sampler2D texture;
 uniform vec2 texOffset;
 
-const int blurRadius = 3;
+uniform int blurRadius = 3;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
