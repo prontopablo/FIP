@@ -10,7 +10,7 @@ PImage[] images = new PImage[2];
 
 // Capture video;
 
-int currentShaderIndex = 35;
+int currentShaderIndex = 19;
 int currentImageIndex = 0;
 int blendingMode = 0;
 boolean useFilter = true;
