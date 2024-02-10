@@ -10,7 +10,7 @@ PImage[] images = new PImage[2];
 
 // Capture video;
 
-int currentShaderIndex = 19;
+int currentShaderIndex = 27;
 int currentImageIndex = 0;
 int blendingMode = 0;
 boolean useFilter = true;
@@ -105,8 +105,8 @@ void draw() {
     } else if (currentShaderIndex == 12) {
       customShaders[currentShaderIndex].set("shades", 4); 
     } else if (currentShaderIndex == 13) {
-      customShaders[currentShaderIndex].set("cellSize", 10.0);
-      customShaders[currentShaderIndex].set("threshold", 0.5);
+      customShaders[currentShaderIndex].set("cellSize", 5.0);
+      customShaders[currentShaderIndex].set("threshold", 0.2);
     } else if (currentShaderIndex == 21) {
       customShaders[currentShaderIndex].set("texture1", images[0]);
       customShaders[currentShaderIndex].set("texture2", images[1]);

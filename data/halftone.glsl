@@ -12,16 +12,16 @@ precision mediump int;
 uniform sampler2D texture;
 uniform vec2 resolution;
 uniform float cellSize = 20.0;
-uniform float threshold = 0.8; // Threshold to determine if the pixel is inside the dot
+uniform float threshold = 0.8;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
 
 void main() {
-    vec2 texCoord = vertTexCoord.st;
+    vec2 tc = vertTexCoord.st;
     
     // Convert the texture coordinates to screen space
-    vec2 screenCoord = texCoord * resolution;
+    vec2 screenCoord = tc * resolution;
 
     // Calculate the position of the current cell
     vec2 cellPos = floor(screenCoord / cellSize) * cellSize;
@@ -36,7 +36,7 @@ void main() {
     float distanceToCenter = length(diff);
     
     // Calculate the radius of the dot (based on intensity)
-    float radius = 0.5 * cellSize * (1.0 - texture2D(texture, texCoord).r);
+    float radius = 0.5 * cellSize * (1.0 - texture2D(texture, tc).r);
     
     if (distanceToCenter <= radius - threshold) {
         // Inside the dot, set the color to black

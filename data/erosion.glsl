@@ -15,7 +15,7 @@ uniform vec2 texOffset;
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
 
-uniform int radius = 3; // The erosion radius, should be passed as a uniform
+uniform int radius = 3;
 
 void main(void) {
   vec2 texSize = textureSize(texture, 0);

@@ -11,13 +11,13 @@ precision mediump int;
 
 uniform sampler2D texture;
 uniform vec2 texOffset;
+uniform float amount = 1.5;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
 
 void main() {
     vec2 tc = vertTexCoord.st;
-    float amount = 1.5; // Strength of enhancement
 
     // Sample the center pixel
     vec4 centerColor = texture2D(texture, tc);
