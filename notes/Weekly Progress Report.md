@@ -4,7 +4,7 @@
 
 ###
 
-- Ported grayscale, flip, rotate, sepia, sharpen, saturation, gamma, brightness, pixelate, quantization, solarize, contrast, deform, dithering, dot, ripple, invert colors, mosaic, cartoon, dilate, vignette, unsharp masking, box blur, canny edge detection, blend, bloom to p5.js
+- Ported grayscale, flip, rotate, sepia, sharpen, saturation, gamma, brightness, pixelate, quantization, solarize, contrast, deform, dithering, dot, ripple, invert colors, mosaic, cartoon, dilate, vignette, unsharp masking, box blur, canny edge detection, blend, bloom, threshold, bilateral, CRT, DoG to p5.js
 - Updated cartoon to have edgeThreshold parameter
 - Updated box blur to have blurRadius parameter
 
