@@ -5,9 +5,12 @@
 FIP is a library that allows you to add post-processing / image-processing effects to your Processing sketch. 
 
 ## Features
-- 40 Effects
+- 43 Effects
 - Hardware Accelerated
-- Lightweight
+- Lightweight (1.96 MB)
+
+## Getting Started
+Head over to [releases](https://github.com/prontopablo/FIP/releases) and download the latest FIP.zip file. Unzip it and put the extracted FIP folder into the libraries folder of your Processing sketches. Examples are included in the FIP folder. 
 
 ## Examples
 [Demo Video](https://github.com/prontopablo/FIP/assets/55544101/9ec66583-ce3e-4e86-aaae-cb8ae8855f24)
@@ -16,11 +19,11 @@ FIP is a library that allows you to add post-processing / image-processing effec
 In accordance with the [Processing library guidelines](https://github.com/benfry/processing4/wiki/Library-Guidelines):
 1. FIP has thus far only been tested on Windows 10 using Processing 4.3.
 2. FIP has no dependencies.
-3. [Examples](TODO)
-4. [Source Code](https://github.com/prontopablo/FIP)
+3. Examples are included in the release.
+4. [Source Code](https://github.com/prontopablo/FIP/releases)
 5. Keywords: _image-processing, post-processing, filters_.
-6. Last update: 28/01/24.
-7. [FIP zip file](TODO)
+6. Last update: 12/02/24.
+7. [FIP zip file](https://github.com/prontopablo/FIP/releases)
 
 ## Contributing
 I welcome contributions from the community to make FIP better. If you have any suggestions, bug fixes, or new features to add, feel free to create a [pull request](https://github.com/prontopablo/FIP/pulls).
@@ -28,4 +31,4 @@ I welcome contributions from the community to make FIP better. If you have any s
 ## Acknowledgments
 Many of these shaders were adapted from existing solutions in other programming languages, in these cases, the links to the original shaders can be found at the top of each .glsl file.
 
-A list of existing Processing image processing libraries can be found [here](https://github.com/prontopablo/FIP/blob/main/notes/Research%20Links.txt).
+A list of existing Processing image processing libraries can be found [here](https://github.com/prontopablo/FIP/blob/main/docs/resources.md).
