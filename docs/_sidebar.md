@@ -1,14 +1,14 @@
 - Getting started
 
-  - [Installation](installation.md)
-  - [Usage](usage.md)
-  - [Setting Parameters](settingParameters.md)
-  - [Issues](issues.md)
+  - [Installation](./installation.md)
+  - [Usage](./usage.md)
+  - [Setting Parameters](./settingParameters.md)
+  - [Issues](./issues.md)
 
 - Reference
 
-  - [Blend](blend.md)
+  - [Blend](./blend.md)
 
 - Resources
 
-  - [List of Resources](resources.md)
+  - [List of Resources](./resources.md)
