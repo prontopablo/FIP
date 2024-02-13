@@ -9,6 +9,7 @@
 - Updated box blur to have blurRadius parameter
 - Updated edge preserving filter to have defualt threshold value
 - Updated laplacian edge enhancement to have amount value
+- Released FIP v.1.0.0 alpha with 43 shaders and 4 examples
 
 #
 
