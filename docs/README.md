@@ -1,4 +1,4 @@
-## Fast Image Processing (FIP)
+## FIP (Fast Image Processing)
 > In-development real-time post-processing library for [Processing](https://processing.org/).
 
 ## What is it?

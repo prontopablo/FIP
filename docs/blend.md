@@ -54,3 +54,15 @@ void draw() {
   filter(blend);
 }
 ```
+
+<div style="display: flex;">
+    <div>
+        <img width="195" height="195" src="./images/irelandBefore.jpg">
+        <img width="195" height="195" src="./images/bird.jpg">
+        <figcaption>Images to be blended</figcaption>
+    </div>
+    <div>
+        <img width="400" height="400" src="./images/irelandBlend.jpg">
+        <figcaption>Blended image</figcaption>
+    </div>
+</div>

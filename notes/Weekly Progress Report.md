@@ -1,5 +1,10 @@
-### Week Starting 05/02/24
+### Week Starting 12/02/24
+- Hosted FIP on alternative GitHub account while having account issues.
+- Posted on Processing Discourse asking for feedback, testing and suggestions.
 #
+
+### Week Starting 05/02/24
+
 - Updated sharpness uniforms
 
 ###
@@ -14,7 +19,6 @@
 #
 
 ### Week Starting 29/01/24
-#
 - Linocut
 
 ###
@@ -23,8 +27,10 @@
 - Added flip directions to flip
 - Fixed error in quantization shader logic
 
-### Week Starting 22/01/24
+
 #
+### Week Starting 22/01/24
+
 - Created Documentation website and started hosting it on GitHub Pages.
 - Added Getting Started and Resources sections to docs, along with Blend as an example reference.
 
@@ -48,13 +54,13 @@
 #
 
 ### Week Starting 15/01/24
-#
+
 - Interim Report
 
 #
 
 ### Week Starting 08/01/24
-#
+
 - Contrast
 - Saturation
 - Gamma
@@ -70,29 +76,29 @@
 #
 
 ### Week Starting 18/12/23
-#
+
 - Sketch
 - CRT
 
 #
 
 ### Week Starting 04/12/23
-#
+
 - Updated [table comparing library functionality](FunctionComparisonTable.jpg)
 
 #
 ### Week Starting 27/11/23
-#
+
 - Created [Introduction First Draft](Introduction%20First%20Draft.md)
 
 #
 ### Week Starting 20/11/23
-#
+
 - Created [table comparing library functionality](FunctionComparisonTable.jpg)
 - Created [3D demo](https://www.youtube.com/watch?v=PWXdbIyUZIo) 
 #
 ### Week Starting 13/11/23
-#
+
 - Started adding notes at the top of each shader for descriptions and credit.
 ###
 - Bilateral
@@ -104,7 +110,7 @@
 #
 
 ### 16/10/23 - 30/10/23
-#
+
 - Created [comparison of current libraries](Comparison%20of%20Image%20Processing%20Libraries.md)
 - Created a [library](Library%20Notes.md)
 - Reorganised project folder and switched to .md files
@@ -120,7 +126,7 @@
 - Renamed "Edge Detection" to "Sobel Edge Detection" for clarity
 #
 ### Week Starting 09/10/23
-#  
+# 
 -  Difference of Gaussian
 -  Unsharp Masking
 -  Edge Preserving
