@@ -15,7 +15,6 @@ Head over to [releases](https://github.com/prontopablo/FIP/releases) and downloa
 Documentation can be found [here]().
 
 ## Examples
-[Demo Video](https://github.com/prontopablo/FIP/assets/55544101/9ec66583-ce3e-4e86-aaae-cb8ae8855f24)
 Example sketches are included in the FIP folder. 
 
 ## Processing Library Guidelines
