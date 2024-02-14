@@ -1,4 +1,4 @@
-Adds a glow effect to the image using a combination of blurring and blending techniques.
+Adds a glow effect using a combination of blurring and blending techniques.
 
 ## Parameters
 `texture` **Texture**: The input texture to be filtered. Default: **`The entire canvas`**

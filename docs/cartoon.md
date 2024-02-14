@@ -1,4 +1,4 @@
-Adds a cartoon effect to the image by emphasizing edges and darkening them.
+Adds a cartoon effect by emphasizing edges and darkening them.
 
 ## Parameters
 `texture` **Texture**: The input texture to be filtered. Default: **`The entire canvas`**

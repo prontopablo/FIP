@@ -1,4 +1,4 @@
-Detects edges in an image using the Canny edge detection algorithm.
+Detects edges using the Canny edge detection algorithm.
 
 ## Parameters
 `texture` **Texture**: The input texture to be filtered. Default: **`The entire canvas`**

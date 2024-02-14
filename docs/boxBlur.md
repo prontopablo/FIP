@@ -1,4 +1,4 @@
-Blurs the input texture using a simple box blur algorithm.
+Blurs using a simple box blur algorithm.
 
 ## Parameters
 `texture` **Texture**: The input texture to be filtered. Default: **`The entire canvas`**

@@ -14,6 +14,7 @@
   - [Brightness](./brightness.md)
   - [Canny Edge Detection](./cannyEdgeDetection.md)
   - [Cartoon](./cartoon.md)
+  - [Contrast](./contrast.md)
 
 - Resources
 

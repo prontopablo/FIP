@@ -1,4 +1,4 @@
-Blurs an input texture while preserving edges based on spatial and intensity (color) differences.
+Blurs while preserving edges based on spatial and intensity (color) differences.
 
 ## Parameters
 `texture` **Texture**: The input texture to be filtered. Default: **`The entire canvas`**

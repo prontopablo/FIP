@@ -1,4 +1,4 @@
-Adjusts the brightness of a texture.
+Adjusts the brightness.
 
 ## Parameters
 `texture` **Texture**: The input texture to be filtered. Default: **`The entire canvas`**
