@@ -1,5 +1,5 @@
 ## FIP (Fast Image Processing)
-> In-development real-time post-processing library for [Processing](https://processing.org/).
+> Real-time post-processing library for [Processing](https://processing.org/).
 
 ## What is it?
 FIP is a library that allows you to add post-processing / image-processing effects to your Processing sketch. 
