@@ -33,4 +33,4 @@ I welcome contributions from the community to make FIP better. If you have any s
 ## Acknowledgments
 Many of these shaders were adapted from existing solutions in other programming languages, in these cases, the links to the original shaders can be found at the top of each .glsl file.
 
-A list of existing Processing image processing libraries can be found [here](https://github.com/prontopablo/FIP/blob/main/docs/resources.md).
+A list of existing Processing image processing libraries can be found [here](https://prontopablo.github.io/FIP/#/./resources).

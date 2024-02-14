@@ -12,7 +12,7 @@ FIP is a library that allows you to add post-processing / image-processing effec
 ## Getting Started
 Head over to [releases](https://github.com/prontopablo/FIP/releases) and download the latest FIP.zip file. Unzip it and put the extracted FIP folder into the libraries folder of your Processing sketches. 
 
-Documentation can be found [here](https://prontopablo.github.io/FIP/#/).
+The reference for each shader can be found in the sidebar.
 
 ## Examples
 Example sketches are included in the FIP folder. 
@@ -33,4 +33,4 @@ I welcome contributions from the community to make FIP better. If you have any s
 ## Acknowledgments
 Many of these shaders were adapted from existing solutions in other programming languages, in these cases, the links to the original shaders can be found at the top of each .glsl file.
 
-A list of existing Processing image processing libraries can be found [here](https://github.com/prontopablo/FIP/blob/main/docs/resources.md).
+A list of existing Processing image processing libraries can be found [here](https://prontopablo.github.io/FIP/#/./resources).
