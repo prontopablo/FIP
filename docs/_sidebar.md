@@ -11,6 +11,9 @@
   - [Bilateral](./bilateral.md)
   - [Bloom](./bloom.md)
   - [Box Blur](./boxBlur.md)
+  - [Brightness](./brightness.md)
+  - [Canny Edge Detection](./cannyEdgeDetection.md)
+  - [Cartoon](./cartoon.md)
 
 - Resources
 
