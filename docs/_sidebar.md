@@ -8,6 +8,9 @@
 - Reference
 
   - [Blend](./blend.md)
+  - [Bilateral](./bilateral.md)
+  - [Bloom](./bloom.md)
+  - [Box Blur](./boxBlur.md)
 
 - Resources
 

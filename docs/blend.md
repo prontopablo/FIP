@@ -56,7 +56,7 @@ void draw() {
 ```
 
 <div style="display: flex;">
-    <div>
+    <div style="margin-right: 20px">
         <img width="195" height="195" src="./images/irelandBefore.jpg">
         <img width="195" height="195" src="./images/bird.jpg">
         <figcaption>Images to be blended</figcaption>

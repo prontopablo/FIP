@@ -25,7 +25,7 @@ In accordance with the [Processing library guidelines](https://github.com/benfry
 3. Examples are included in the release.
 4. [Source Code](https://github.com/prontopablo/FIP/releases)
 5. Keywords: _image-processing, post-processing, filters_.
-6. Last update: 13/02/24.
+6. Last update: 14/02/24.
 7. [FIP zip file](https://github.com/prontopablo/FIP/releases)
 
 ## Contributing

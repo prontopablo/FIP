@@ -1,6 +1,7 @@
 ### Week Starting 12/02/24
-- Hosted FIP on alternative GitHub account while having account issues.
-- Posted on Processing Discourse asking for feedback, testing and suggestions.
+- Hosted FIP on alternative GitHub account while having account issues
+- Posted on Processing Discourse asking for feedback, testing and suggestions
+- Wrote 3 more shader reference pages
 #
 
 ### Week Starting 05/02/24
