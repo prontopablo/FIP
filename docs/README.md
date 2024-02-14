@@ -12,10 +12,9 @@ FIP is a library that allows you to add post-processing / image-processing effec
 ## Getting Started
 Head over to [releases](https://github.com/prontopablo/FIP/releases) and download the latest FIP.zip file. Unzip it and put the extracted FIP folder into the libraries folder of your Processing sketches. 
 
-Documentation can be found [here]().
+Documentation can be found [here](https://prontopablo.github.io/FIP/#/).
 
 ## Examples
-[Demo Video](https://github.com/prontopablo/FIP/assets/55544101/9ec66583-ce3e-4e86-aaae-cb8ae8855f24)
 Example sketches are included in the FIP folder. 
 
 ## Processing Library Guidelines
