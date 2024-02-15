@@ -16,6 +16,12 @@
   - [Cartoon](./cartoon.md)
   - [Contrast](./contrast.md)
   - [CRT](./crt.md)
+  - [Deform](./deform.md)
+  - [Difference of Gaussian](./differenceOfGaussian.md)
+  - [Dilate](./dilate.md)
+  - [Dithering](./dithering.md)
+  - [Dot](./dot.md)
+  - [Duotone](./duoTone.md)
 
 - Resources
 
