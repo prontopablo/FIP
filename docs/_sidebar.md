@@ -22,6 +22,10 @@
   - [Dithering](./dithering.md)
   - [Dot](./dot.md)
   - [Duotone](./duoTone.md)
+  - [Edge Preserving Filter](./edgePreservingFilter.md)
+  - [Emboss](./emboss.md)
+  - [Erosion](./erosion.md)
+  - [Flip](./flip.md)
 
 - Resources
 
