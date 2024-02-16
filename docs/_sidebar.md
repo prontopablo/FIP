@@ -46,6 +46,9 @@
   - [Sharpen](./sharpen.md)
   - [Sketch](./sketch.md)
   - [Sobel Edge Detection](./sobelEdgeDetection.md)
+  - [Solarize](./solarize.md)
+  - [Static](./static.md)
+  - [Threshold](./threshold.md)
 
 - Resources
 
