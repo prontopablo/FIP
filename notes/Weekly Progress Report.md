@@ -1,7 +1,9 @@
 ### Week Starting 12/02/24
 - Hosted FIP on alternative GitHub account while having account issues
 - Posted on Processing Discourse asking for feedback, testing and suggestions
-- Wrote 3 more shader reference pages
+- Wrote 10 more shader reference pages
+- Submitted FIP to Contribution Manager
+- Added copy code button to reference site
 #
 
 ### Week Starting 05/02/24

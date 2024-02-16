@@ -26,6 +26,14 @@
   - [Emboss](./emboss.md)
   - [Erosion](./erosion.md)
   - [Flip](./flip.md)
+  - [Gamma](./gamma.md)
+  - [Gaussian Blur](./gaussianBlur.md)
+  - [Glitch](./glitch.md)
+  - [Grayscale](./grayscale.md)
+  - [Halftone](./halftone.md)
+  - [Invert Colors](./invertColors.md)
+  - [Kuwahara](./kuwahara.md)
+  - [Laplacian Edge Enhancement](./laplacianEdgeEnhancement.md)
 
 - Resources
 
