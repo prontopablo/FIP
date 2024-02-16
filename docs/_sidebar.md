@@ -34,6 +34,18 @@
   - [Invert Colors](./invertColors.md)
   - [Kuwahara](./kuwahara.md)
   - [Laplacian Edge Enhancement](./laplacianEdgeEnhancement.md)
+  - [Linocut](./linocut.md)
+  - [Mosaic](./mosaic.md)
+  - [Motion Blur](./motionBlur.md)
+  - [Pixelate](./pixelate.md)
+  - [Quantization](./quantization.md)
+  - [Ripple](./ripple.md)
+  - [Rotate](./rotate.md)
+  - [Saturation](./saturation.md)
+  - [Sepia](./sepia.md)
+  - [Sharpen](./sharpen.md)
+  - [Sketch](./sketch.md)
+  - [Sobel Edge Detection](./sobelEdgeDetection.md)
 
 - Resources
 
