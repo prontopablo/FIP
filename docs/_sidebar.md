@@ -49,6 +49,8 @@
   - [Solarize](./solarize.md)
   - [Static](./static.md)
   - [Threshold](./threshold.md)
+  - [Unsharp Masking](./unsharpMasking.md)
+  - [Vignette](./vignette.md)
 
 - Resources
 
