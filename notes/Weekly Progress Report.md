@@ -1,3 +1,7 @@
+### Week Starting 19/02/24
+- Converted comparison table to LaTeX
+- Added Anti-aliasing
+
 ### Week Starting 12/02/24
 - Hosted FIP on alternative GitHub account while having account issues
 - Posted on Processing Discourse asking for feedback, testing and suggestions

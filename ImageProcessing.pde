@@ -1,12 +1,12 @@
 // import processing.video.*;
 
-PShader[] customShaders = new PShader[43];
-String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Dot", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform", "Ripple", "Solarize", "Duo-tone", "Linocut"};
+PShader[] customShaders = new PShader[44];
+String[] shaderNames = { "Gaussian Blur", "Motion Blur", "Sobel Edge Detection", "Edge Enhancement", "Difference of Gaussian", "Unsharp Masking", "Edge-Preserving Filter", "Grayscale", "Flip", "Invert Colors", "Erosion", "Vignette", "Quantization", "Halftone", "Pixelate", "Sharpen", "Rotate", "Cartoon", "Emboss", "Bloom", "Threshold", "Blend", "Dot", "Canny Edge Detection", "Sepia", "Glitch", "Bilateral Filter", "Sketch", "CRT", "Contrast", "Dithering", "Gamma", "Kuwahara", "Saturation", "Static", "Box Blur", "Dilate", "Brightness", "Deform", "Ripple", "Solarize", "Duo-tone", "Linocut", "Anti-Aliasing"};
 PImage[] images = new PImage[2];
 
 // Capture video;
 
-int currentShaderIndex = 27;
+int currentShaderIndex = 44;
 int currentImageIndex = 0;
 int blendingMode = 0;
 boolean useFilter = true;
@@ -64,9 +64,11 @@ void setup() {
   customShaders[40] = loadShader("solarize.glsl");
   customShaders[41] = loadShader("duoTone.glsl");
   customShaders[42] = loadShader("linocut.glsl");
+  customShaders[43] = loadShader("antiAliasing.glsl");
 
   images[0] = loadImage("ireland.jpg");
   images[1] = loadImage("bird.jpg");
+  
     
   println("Using: " + shaderNames[currentShaderIndex]);
 }

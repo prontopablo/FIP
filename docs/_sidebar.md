@@ -7,6 +7,7 @@
 
 - Reference
 
+  - [Anti-aliasing](./antiAliasing.md)
   - [Bilateral](./bilateral.md)
   - [Blend](./blend.md)
   - [Bloom](./bloom.md)
