@@ -2,6 +2,8 @@
 - Converted comparison table to LaTeX
 - Added Anti-aliasing
 
+#
+
 ### Week Starting 12/02/24
 - Hosted FIP on alternative GitHub account while having account issues
 - Posted on Processing Discourse asking for feedback, testing and suggestions
@@ -34,8 +36,8 @@
 - Added flip directions to flip
 - Fixed error in quantization shader logic
 
-
 #
+
 ### Week Starting 22/01/24
 
 - Created Documentation website and started hosting it on GitHub Pages.
