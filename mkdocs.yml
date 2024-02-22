@@ -8,6 +8,7 @@ repo_url: https://github.com/prontopablo/FIP
 
 extra:
   generator: false
+  homepage: index.html
 
 markdown_extensions:
   - toc:
