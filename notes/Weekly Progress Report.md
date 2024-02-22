@@ -1,6 +1,12 @@
 ### Week Starting 19/02/24
+- Converted docs to generate static html for offline reference, restyled website
 - Converted comparison table to LaTeX
 - Added Anti-aliasing
+- Added stable release url (latest tag) and FIP.txt as per the library guidelines
+- Fixed examples in reference pages
+- Fixed unused uniforms in duoTone, quantization and linocut
+- Renamed Edge Preserving Filter to Edge Preserving Smooth
+- Fixed flipped y coordinates in glitch shader 
 
 #
 

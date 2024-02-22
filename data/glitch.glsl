@@ -24,7 +24,7 @@ void main() {
     vec4 originalColor = texture2D(texture, tc);
 
     // Calculate the distance from the mouse pointer
-    float dist = length(tc - mouse / resolution);
+    float dist = length(tc - vec2(mouse.x / resolution.x, 1.0 - mouse.y / resolution.y)) / 3;
 
     // Adjust glitch intensity based on distance from the mouse
     float glitchIntensity = smoothstep(0.0, 0.1, dist);

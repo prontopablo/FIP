@@ -11,7 +11,6 @@ precision mediump int;
 */
 
 uniform sampler2D texture;
-uniform vec2 resolution;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;

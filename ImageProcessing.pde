@@ -6,7 +6,7 @@ PImage[] images = new PImage[2];
 
 // Capture video;
 
-int currentShaderIndex = 44;
+int currentShaderIndex = 43;
 int currentImageIndex = 0;
 int blendingMode = 0;
 boolean useFilter = true;
@@ -27,7 +27,7 @@ void setup() {
   customShaders[3] = loadShader("laplacianEdgeEnhancement.glsl");
   customShaders[4] = loadShader("differenceOfGaussian.glsl");
   customShaders[5] = loadShader("unsharpMasking.glsl");
-  customShaders[6] = loadShader("edgePreservingFilter.glsl");
+  customShaders[6] = loadShader("edgePreservingSmooth.glsl");
   customShaders[7] = loadShader("grayscale.glsl");
   customShaders[8] = loadShader("flip.glsl");
   customShaders[9] = loadShader("invertColors.glsl");
