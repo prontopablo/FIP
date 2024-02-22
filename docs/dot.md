@@ -7,7 +7,7 @@ Emulates a seven-segment display by grouping pixels into dots.
 <br>
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader dot;

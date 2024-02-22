@@ -6,7 +6,7 @@ Uses sine waves to deform.
 `deformationAmount` **Float:** The amount of deformation to apply based on a sine wave. Default: **`0.1`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader deform;

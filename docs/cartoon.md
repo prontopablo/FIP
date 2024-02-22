@@ -8,7 +8,7 @@ Adds a cartoon effect by emphasizing edges and darkening them.
 `edgeThreshold` **Float:** The threshold value that determines whether a pixel is considered an edge pixel based on the difference between the center pixel and its neighbors. Default: **`0.1`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader cartoon;

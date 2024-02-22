@@ -27,7 +27,7 @@ Blends textures together based on a mix factor and blending type.
 | Default       | Linear Interpolation        |
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader blend;
@@ -57,8 +57,8 @@ void draw() {
 
 <div style="display: flex;">
     <div style="margin-right: 20px">
-        <img width="195" height="195" src="./images/irelandBefore.jpg">
-        <img width="195" height="195" src="./images/bird.jpg">
+        <img width="200" height="200" src="./images/irelandBefore.jpg">
+        <img width="200" height="200" src="./images/bird.jpg">
         <figcaption>Images to be blended</figcaption>
     </div>
     <div>

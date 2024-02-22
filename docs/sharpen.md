@@ -8,7 +8,7 @@ Applies a sharpening effect to the input texture using a convolution kernel. It 
 `sharpness` **Float:** The intensity of the sharpening effect.  Default: **`1.5`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader sharpen;

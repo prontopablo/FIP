@@ -8,7 +8,7 @@ Computes the minimum pixel value within a local neighborhood. The structuring el
 `radius` **Int:** The radius of the erosion operation. Default: **`3`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader erosion;

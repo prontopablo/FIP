@@ -6,7 +6,7 @@ Applies a threshold to a texture, converting it to a binary black and white imag
 `threshold` **Float:** The threshold value that determines the cutoff point. Pixels with grayscale values above this threshold will be set to white, and those below will be set to black. Default: **`0.5`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader threshold;

@@ -4,7 +4,7 @@ Inverts the colors of a texture.
 `texture` **Texture**: The input texture to be filtered. Default: **`The entire canvas`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader invertColors;

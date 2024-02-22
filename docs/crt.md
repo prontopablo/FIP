@@ -16,7 +16,7 @@ Recreates the effects of an old CRT television with visible scanlines, spherical
 `distortion` **Float:** Controls the amount of spherical warping. Default: **`0.02`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader crt;

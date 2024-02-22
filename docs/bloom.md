@@ -8,7 +8,7 @@ Adds a glow effect using a combination of blurring and blending techniques.
 `glow` **Float:** The extent of the glow, controlled by the blur radius. Should be within the range [0.0, 8.0]. Default: **`0.0`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader bloom;

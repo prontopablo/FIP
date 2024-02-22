@@ -6,7 +6,7 @@ Adjusts the contrast.
 `contrast` **Float:** The contrast adjustment factor. A value of 1.0 leaves the contrast unchanged, while higher values increase contrast, and lower values decrease contrast. Default: **`2.0`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader contrast;

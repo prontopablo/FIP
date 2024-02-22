@@ -6,7 +6,7 @@ Converts the input image to a sepia-toned version using a specific color transfo
 `texOffset` **Vec2:** The offset used for sampling neighboring pixels. Default: **`(1.0 / width, 1.0 / height)`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader sepia;

@@ -10,28 +10,28 @@ Combines Sobel operator for edge detection and stippling. The Sobel operator cal
 `stippleDensity` **Float:** The density of stippling dots to be added to the ink effect. A lower value results in more dots.Default: **`0.99`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
-PShader static;
+PShader staticShader;
 
 PImage ireland;
 
 void setup() {
   size(1000, 1000, P3D);
 
-  static = loadShader("static.glsl");
+  staticShader = loadShader("static.glsl");
 
   ireland = loadImage("ireland.jpg");
 
-  static.set("threshold", 0.05);
-  static.set("stippleDensity", 0.99);
+  staticShader.set("threshold", 0.05);
+  staticShader.set("stippleDensity", 0.99);
 }
 
 void draw() {
   image(ireland, 0, 0, width, height);
 
-  filter(static);
+  filter(staticShader);
 }
 
 ```

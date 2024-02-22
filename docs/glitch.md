@@ -10,7 +10,7 @@ The RGB channels are separated and displaced, then original and glitched colors 
 `mouse` **Vec2**: The position of the mouse pointer. Default: **`vec2(0.0)`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader glitch;
@@ -24,14 +24,14 @@ void setup() {
 
   ireland = loadImage("ireland.jpg");
 
-  glitch.set("resolution", (width, height));
+  glitch.set("resolution", width, height);
 }
 
 void draw() {
   image(ireland, 0, 0, width, height);
 
   glitch.set("mouse", float(mouseX), float(mouseY));
-  filter(gaussianBlur);
+  filter(glitch);
 }
 
 ```

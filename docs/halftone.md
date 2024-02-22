@@ -12,7 +12,7 @@ Applies a halftone effect by converting texture coordinates to screen space, def
 `threshold` Float: The threshold value for dot creation. A higher value results in fewer dots. Default: **`0.8`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader halftone;
@@ -26,9 +26,9 @@ void setup() {
 
   ireland = loadImage("ireland.jpg");
 
-  halftone.set("resolution", (width, height));
-  halftone.set("cellSize", 20.0);
-  halftone.set("threshold", 0.8);
+  halftone.set("resolution", width, height);
+  halftone.set("cellSize", 5.0);
+  halftone.set("threshold", 0.2);
 }
 
 void draw() {

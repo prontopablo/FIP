@@ -1,11 +1,12 @@
 # Usage
 Once FIP has been added to your libraries, to use an effect you:
+
 1. Import FIP
 2. Specify in `size()` the P2D or P3D renderer, but not the default renderer ([Why?](https://processing.org/reference/shader_.html)).
 3. Load the shader you want, using `loadShader()`.
 4. Call `filter()`, passing in the shader name.
 
-```processing
+```java
 import fip.*; // Import the FIP library
 
 PShader glitch;

@@ -8,7 +8,7 @@ Blurs using a simple box blur algorithm.
 `blurRadius` **Int:** The radius of the box blur. Controls the extent of blurring. Default: **`3`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader boxBlur;

@@ -8,7 +8,7 @@ Rotates an input texture based on a specified rotation angle in degrees. It ensu
 `rotationAngleDegrees` **Float:** Rotation angle in degrees. Default: **`45.0`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader rotate;

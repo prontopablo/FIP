@@ -8,7 +8,7 @@ Performs edge detection on the input texture using the Sobel operator. It calcul
 `threshold` **Float:** The threshold value to determine the intensity at which edges are detected. Default: **`0.2`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader sobelEdgeDetection;

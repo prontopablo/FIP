@@ -8,7 +8,7 @@ Reduces the number of colors in an image through quantization.
 `shades` **Int:** Number of shades to quantize the colors to. Default: **`4.0`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader quantization;
@@ -22,7 +22,6 @@ void setup() {
 
   ireland = loadImage("ireland.jpg");
 
-  quantization.set("resolution", (width, height));
   quantization.set("shades", 4);
 }
 

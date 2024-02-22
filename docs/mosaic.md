@@ -8,7 +8,7 @@ Applies a mosaic effect to an input texture.
 `mosaicSize` **Float:** Size of the mosaic cells. A higher value results in larger mosaic cells. Default: **`40.0`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader mosaic;

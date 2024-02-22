@@ -7,7 +7,7 @@ As FIP runs GLSL shaders on the GPU, make sure you update to the latest graphics
 ## Not passing textures
 Some shaders have required parameters and will not work if these parameters are not passed into them. Below we use the _blend_ shader but fail to pass it the textures we want to blend, so it does nothing.
 
-```processing
+```java
 import fip.*;
 
 PShader blend;

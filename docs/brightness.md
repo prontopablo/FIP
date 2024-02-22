@@ -6,7 +6,7 @@ Adjusts the brightness.
 `brightness` **Float:** The factor by which to adjust the brightness. A value less than 1.0 darkens the image, while a value greater than 1.0 brightens it. Default: **`0.7`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader brightness;

@@ -10,7 +10,7 @@ Flips the input texture horizontally and/or vertically based on specified parame
 `flipVertical` **Boolean:**  If `true`, flips the texture vertically. Default: **`true`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader flip;

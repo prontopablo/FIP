@@ -8,7 +8,7 @@ Performs unsharp masking to enhance image sharpness. Unsharp masking involves su
 `strength` **Float:** The strength of the unsharp masking effect. A higher value increases the sharpening effect. Default: **`2.0`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader unsharpMasking;

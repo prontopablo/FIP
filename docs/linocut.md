@@ -12,7 +12,7 @@ Simulates a linocut effect by converting the input image to grayscale and applyi
 `paperColor` **Vec3**: The color of the paper. This is a RGB vector, where each component is in the range [0, 1]. Default: **`(1.0, 1.0, 1.0)`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader linocut;
@@ -26,10 +26,9 @@ void setup() {
 
   ireland = loadImage("ireland.jpg");
 
-  linocut.set("resolution", (width, height));
   linocut.set("threshold", 0.4);
-  linocut.set("inkColor", (0.4, 0.4, 1.0));
-  linocut.set("paperColor", (1.0, 1.0, 1.0));
+  linocut.set("inkColor", 0.4, 0.4, 1.0);
+  linocut.set("paperColor", 1.0, 1.0, 1.0);
 }
 
 void draw() {

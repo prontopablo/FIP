@@ -7,7 +7,7 @@ Dilates the input image to increase light areas. Samples surrounding pixels and 
 <br>
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader dilate;

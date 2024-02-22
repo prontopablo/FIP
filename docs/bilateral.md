@@ -10,7 +10,7 @@ Blurs while preserving edges based on spatial and intensity (color) differences.
 `sigmaColor` **Float:** Intensity (color) standard deviation for calculating color differences. Default: **`0.1`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader bilateral;

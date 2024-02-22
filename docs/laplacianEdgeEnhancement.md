@@ -8,7 +8,7 @@ Enhances image details by emphasizing edges through Laplacian filtering.
 `amount` **Float:** Controls the strength of the enhancement. Higher values result in more pronounced edges. Default: **`1.5`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader laplacianEdgeEnhancement;

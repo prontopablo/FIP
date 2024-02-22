@@ -8,7 +8,7 @@ Applies the Sobel operator for edge detection, creating an ink-like effect on an
 `threshold` **Float:** The threshold for edge intensity. Values above this threshold will be considered edges, creating the ink-like effect. Default: **`0.15`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader sketch;

@@ -8,7 +8,7 @@ Blurs an image by simulating motion in a specified direction.
 `blurAmount` **Float:** The amount of blur to apply. Higher values result in more significant blur. Default: **`10.0`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader motionBlur;
@@ -22,7 +22,7 @@ void setup() {
 
   ireland = loadImage("ireland.jpg");
 
-  motionBlur.set("texOffset", (1.0, 0.0)); // Horizontal motion blur
+  motionBlur.set("texOffset", 1.0, 0.0); // Horizontal motion blur
   motionBlur.set("blurAmount", 20.0);
 }
 

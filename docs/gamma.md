@@ -9,7 +9,7 @@ Applies gamma correction to the input texture color.
 
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader gamma;

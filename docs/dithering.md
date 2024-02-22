@@ -7,7 +7,7 @@ Applies dithering to an image, a technique commonly used to simulate additional 
 <br>
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader dithering;

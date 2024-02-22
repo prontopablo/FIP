@@ -10,7 +10,7 @@ Detects edges using the Canny edge detection algorithm.
 `thresholdHigh` **Float:** The higher threshold for edge detection. Pixels with intensity gradients above this threshold will be considered strong edges. Default: **`0.3`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader cannyEdgeDetection;

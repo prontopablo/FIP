@@ -7,7 +7,7 @@ Applies a Gaussian blur to the input texture.
 
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader gaussianBlur;

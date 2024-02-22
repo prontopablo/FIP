@@ -2,7 +2,7 @@
 Each effect has parameters that you can edit using _.set()_. The reference page for each effect lists the parameters and what they do.
 
 The example below sets the blur amount of the motion blur shader to 100 (the default value is 10).
-```processing
+```java
 import fip.*;
 
 PShader motionBlur;

@@ -13,7 +13,7 @@ Creates a ripple effect using sine function.
 
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader ripple;
@@ -27,10 +27,10 @@ void setup() {
 
   ireland = loadImage("ireland.jpg");
 
-  ripple.set("resolution", (width, height));
+  ripple.set("resolution", width, height);
   ripple.set("rippleFrequency", 50.0);
   ripple.set("rippleAmplitude", 0.01);
-  ripple.set("rippleCenterOffset", (0.0, 0.0));
+  ripple.set("rippleCenterOffset", 0.0, 0.0);
 
 }
 

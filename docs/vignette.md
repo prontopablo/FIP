@@ -14,7 +14,7 @@ Adds a vignette effect to the texture.
 `vignetteSize` **Float:** Overall size of the vignette effect. Default: **`1.0`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader vignette;

@@ -10,7 +10,7 @@ Applies two Gaussian blurs to the input texture and calculates the Difference of
 `radius2` **Float:** The radius of the second Gaussian blur. Default: **`1.0`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader differenceOfGaussian;

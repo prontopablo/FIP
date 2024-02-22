@@ -7,4 +7,4 @@ The library is currently being reviewed by Processing Org, once it has been acce
 <figcaption>The Processing Contribution Manager can be found in Sketch > Import Library > Manage Libraries</figcaption>
 
 ## Option 2: Install Manually
-[Download](TODO) and then unzip FIP. Then put the extracted folder into the "libraries" folder of Processing.
+[Download](https://github.com/prontopablo/FIP/releases/tag/latest) and then unzip FIP. Then put the extracted folder into the "libraries" folder of Processing.

@@ -8,7 +8,7 @@ Performs basic anti-aliasing using a 2x2 super-sampling technique. Takes four sa
 `strength` **Float:**  Default: **`1.0`** Controls the size of the offset for super-sampling. Larger values result in stronger anti-aliasing.
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader antiAliasing;

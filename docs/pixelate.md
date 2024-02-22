@@ -8,7 +8,7 @@ Pixelates an image by rounding each pixel to a fixed grid based on the specified
 `pixelSize` **Float:** The size of each pixel in the pixel grid. Default: **`10.0`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader pixelate;

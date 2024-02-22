@@ -8,7 +8,7 @@ Applies an emboss effect to the input texture, creating a 3D appearance. This is
 
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader emboss;

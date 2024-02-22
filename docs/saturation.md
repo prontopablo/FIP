@@ -6,7 +6,7 @@ Adjusts the saturation of an input texture. It operates by converting the origin
 `saturation` **Float:** Controls the saturation of the image. A value of 0.0 results in a grayscale image, while higher values increase saturation. Default: **`2.0`**
 
 ## Example
-```processing
+```java
 import fip.*;
 
 PShader saturation;
