@@ -7,7 +7,7 @@ FIP is a library that allows you to add post-processing / image-processing effec
 ## Features
 - 44 Effects
 - Hardware Accelerated
-- Lightweight (536 kB)
+- Lightweight
 
 ## Getting Started
 Head over to [releases](https://github.com/prontopablo/FIP/releases) and download the latest FIP.zip file. Unzip it and put the extracted FIP folder into the libraries folder of your Processing sketches. 
