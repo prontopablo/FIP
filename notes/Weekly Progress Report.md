@@ -7,6 +7,9 @@
 - Fixed unused uniforms in duoTone, quantization and linocut
 - Renamed Edge Preserving Filter to Edge Preserving Smooth
 - Fixed flipped y coordinates in glitch shader 
+- Compressed site images
+- Added PGraphics example
+- Ported static shader to p5.js
 
 #
 
