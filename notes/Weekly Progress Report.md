@@ -1,15 +1,21 @@
 ### Week Starting 19/02/24
 - Converted docs to generate static html for offline reference, restyled website
-- Converted comparison table to LaTeX
-- Added Anti-aliasing
 - Added stable release url (latest tag) and FIP.txt as per the library guidelines
 - Fixed examples in reference pages
+- Compressed site images
+###
+- Created p5.FIP.js
+- Created p5.FIP GitHub + Site
+- Added p5.FIP examples + collection
+###
+- Added Anti-aliasing
 - Fixed unused uniforms in duoTone, quantization and linocut
 - Renamed Edge Preserving Filter to Edge Preserving Smooth
 - Fixed flipped y coordinates in glitch shader 
-- Compressed site images
 - Added PGraphics example
 - Ported static shader to p5.js
+###
+- Converted comparison table to LaTeX
 
 #
 
