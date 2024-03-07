@@ -10,7 +10,7 @@ FIP is a library that allows you to add post-processing / image-processing effec
 - Lightweight
 
 ## Getting Started
-Head over to [releases](https://github.com/prontopablo/FIP/releases) and download the latest FIP.zip file. Unzip it and put the extracted FIP folder into the libraries folder of your Processing sketches. 
+FIP can be installed through the Processing Contribution Manager, installation instructions are [here](./installation.md).
 
 The reference for each shader can be found in the sidebar of this website.
 
@@ -25,7 +25,7 @@ In accordance with the [Processing library guidelines](https://github.com/benfry
 3. Examples are included in the release.
 4. [Source Code](https://github.com/prontopablo/FIP/releases)
 5. Keywords: _image-processing, post-processing, filters_.
-6. Last update: 22/02/24.
+6. Last update: 07/03/24.
 7. [FIP zip file](https://github.com/prontopablo/FIP/releases)
 
 ## Contributing
