@@ -16,7 +16,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  threshold = loadShader("threshold.glsl");
+  threshold = loadShader(FIP.threshold);
 
   ireland = loadImage("ireland.jpg");
 

@@ -18,7 +18,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  emboss = loadShader("emboss.glsl");
+  emboss = loadShader(FIP.emboss);
 
   ireland = loadImage("ireland.jpg");
 }

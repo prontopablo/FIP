@@ -16,7 +16,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  saturation = loadShader("saturation.glsl");
+  saturation = loadShader(FIP.saturation);
 
   ireland = loadImage("ireland.jpg");
 

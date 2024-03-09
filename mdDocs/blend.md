@@ -38,7 +38,7 @@ PImage bird;
 void setup() {
   size(1000, 1000, P3D);
 
-  blend = loadShader("blend.glsl");
+  blend = loadShader(FIP.blend);
 
   ireland = loadImage("ireland.jpg");
   bird = loadImage("bird.jpg");

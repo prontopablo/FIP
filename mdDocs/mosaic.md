@@ -18,7 +18,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  mosaic = loadShader("mosaic.glsl");
+  mosaic = loadShader(FIP.mosaic);
 
   ireland = loadImage("ireland.jpg");
 

@@ -18,7 +18,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  sobelEdgeDetection = loadShader("sobelEdgeDetection.glsl");
+  sobelEdgeDetection = loadShader(FIP.sobelEdgeDetection);
 
   ireland = loadImage("ireland.jpg");
 

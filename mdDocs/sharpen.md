@@ -18,7 +18,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  sharpen = loadShader("sharpen.glsl");
+  sharpen = loadShader(FIP.sharpen);
 
   ireland = loadImage("ireland.jpg");
 

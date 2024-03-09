@@ -1,3 +1,5 @@
+// Sketch used to test new features before they are added to the Library.
+
 // import processing.video.*;
 
 PShader[] customShaders = new PShader[44];

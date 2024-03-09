@@ -15,7 +15,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  brightness = loadShader("brightness.glsl");
+  brightness = loadShader(FIP.brightness);
 
   ireland = loadImage("ireland.jpg");
 

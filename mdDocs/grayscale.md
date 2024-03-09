@@ -16,7 +16,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  grayscale = loadShader("grayscale.glsl");
+  grayscale = loadShader(FIP.grayscale);
 
   ireland = loadImage("ireland.jpg");
 }

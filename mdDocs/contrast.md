@@ -15,7 +15,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  contrast = loadShader("contrast.glsl");
+  contrast = loadShader(FIP.contrast);
 
   ireland = loadImage("ireland.jpg");
 

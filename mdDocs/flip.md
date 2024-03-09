@@ -20,7 +20,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  flip = loadShader("flip.glsl");
+  flip = loadShader(FIP.flip);
 
   ireland = loadImage("ireland.jpg");
 

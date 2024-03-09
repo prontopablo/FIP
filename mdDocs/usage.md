@@ -3,8 +3,10 @@ Once FIP has been added to your libraries, to use an effect you:
 
 1. Import FIP
 2. Specify in `size()` the P2D or P3D renderer, but not the default renderer ([Why?](https://processing.org/reference/shader_.html)).
-3. Load the shader you want, using `loadShader()`.
+3. Load the shader you want, using `loadShader()`[^1].
 4. Call `filter()`, passing in the shader name.
+
+[^1]: The shader names are in camelCase, e.g.: FIP.sobelEdgeDetection
 
 ```java
 import fip.*; // Import the FIP library
@@ -15,7 +17,7 @@ PImage ireland;
 void setup() {
     size(1000, 1000, P3D); // Set up the canvas with a renderer (P3D in this case)
 
-    glitch = loadShader("glitch.glsl"); // Load the glitch shader
+    glitch = loadShader(FIP.glitch); // Load the glitch shader
 
     ireland = loadImage("ireland.jpg");
 }

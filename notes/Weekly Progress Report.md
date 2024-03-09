@@ -1,3 +1,10 @@
+### Week Starting 04/03/24
+- Writeup work, working through feedback
+- Updated website to have next/prev buttons, footer, footnotes.
+- Updated FIP archictecture to abstract file path loading
+
+#
+
 ### Week Starting 19/02/24
 - Converted docs to generate static html for offline reference, restyled website
 - Added stable release url (latest tag) and FIP.txt as per the library guidelines

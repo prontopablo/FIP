@@ -19,7 +19,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  gamma = loadShader("gamma.glsl");
+  gamma = loadShader(FIP.gamma);
 
   ireland = loadImage("ireland.jpg");
 

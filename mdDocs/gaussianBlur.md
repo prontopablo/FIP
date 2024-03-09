@@ -17,7 +17,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  gaussianBlur = loadShader("gaussianBlur.glsl");
+  gaussianBlur = loadShader(FIP.gaussianBlur);
 
   ireland = loadImage("ireland.jpg");
 }

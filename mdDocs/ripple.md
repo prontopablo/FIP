@@ -23,7 +23,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  ripple = loadShader("ripple.glsl");
+  ripple = loadShader(FIP.ripple);
 
   ireland = loadImage("ireland.jpg");
 

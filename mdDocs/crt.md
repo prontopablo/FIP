@@ -25,7 +25,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  crt = loadShader("crt.glsl");
+  crt = loadShader(FIP.crt);
 
   ireland = loadImage("ireland.jpg");
 

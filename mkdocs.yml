@@ -7,10 +7,15 @@ plugins:
 repo_url: https://github.com/prontopablo/FIP
 
 extra:
-  generator: false
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/prontopablo
   homepage: index.html
 
+copyright: FIP is maintained by prontopablo. MIT Licence. 
+
 markdown_extensions:
+  - footnotes
   - toc:
       toc_depth: 0
   - pymdownx.highlight:
@@ -28,6 +33,7 @@ theme:
     - navigation.path
     - navigation.instant.preview
     - navigation.expand
+    - navigation.footer
     - content.code.copy
     - search.suggest
   icon:
@@ -97,7 +103,7 @@ nav:
     - Sketch: sketch.md
     - Sobel Edge Detection: sobelEdgeDetection.md
     - Solarize: solarize.md
-    - Static: static.md
+    - Static Effect: staticEffect.md
     - Threshold: threshold.md
     - Unsharp Masking: unsharpMasking.md
     - Vignette: vignette.md

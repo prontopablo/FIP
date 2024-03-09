@@ -24,7 +24,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  vignette = loadShader("vignette.glsl");
+  vignette = loadShader(FIP.vignette);
 
   ireland = loadImage("ireland.jpg");
 

@@ -17,7 +17,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  antiAliasing = loadShader("antiAliasing.glsl");
+  antiAliasing = loadShader(FIP.antiAliasing);
 
   ireland = loadImage("ireland.jpg");
 

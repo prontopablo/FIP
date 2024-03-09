@@ -18,7 +18,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  unsharpMasking = loadShader("unsharpMasking.glsl");
+  unsharpMasking = loadShader(FIP.unsharpMasking);
 
   ireland = loadImage("ireland.jpg");
 

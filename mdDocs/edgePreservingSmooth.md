@@ -19,7 +19,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  edgePreservingFilter = loadShader("edgePreservingFilter.glsl");
+  edgePreservingFilter = loadShader(FIP.edgePreservingSmooth);
 
   ireland = loadImage("ireland.jpg");
 

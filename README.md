@@ -2,7 +2,7 @@
 > Real-time post-processing library for [Processing](https://processing.org/).
 
 ## What is it?
-FIP is a library that allows you to add post-processing / image-processing effects to your Processing sketch. 
+FIP is a library that allows you to add image-processing / post-processing effects to your Processing sketch. 
 
 ## Features
 - 44 Effects
@@ -22,7 +22,7 @@ In accordance with the [Processing library guidelines](https://github.com/benfry
 3. Examples are included in the release.
 4. [Source Code](https://github.com/prontopablo/FIP/releases)
 5. Keywords: _image-processing, post-processing, filters_.
-6. Last update: 22/02/24.
+6. Last update: 09/03/24.
 7. [FIP zip file](https://github.com/prontopablo/FIP/releases)
 
 ## Contributing

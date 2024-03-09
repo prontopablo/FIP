@@ -18,7 +18,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  erosion = loadShader("erosion.glsl");
+  erosion = loadShader(FIP.erosion);
 
   ireland = loadImage("ireland.jpg");
 

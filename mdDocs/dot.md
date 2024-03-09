@@ -16,7 +16,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  dot = loadShader("dot.glsl");
+  dot = loadShader(FIP.dot);
 
   ireland = loadImage("ireland.jpg");
   dot.set("dotSize", 0.008);

@@ -22,7 +22,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  linocut = loadShader("linocut.glsl");
+  linocut = loadShader(FIP.linocut);
 
   ireland = loadImage("ireland.jpg");
 

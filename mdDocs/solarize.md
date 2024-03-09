@@ -18,7 +18,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  solarize = loadShader("solarize.glsl");
+  solarize = loadShader(FIP.solarize);
 
   ireland = loadImage("ireland.jpg");
 

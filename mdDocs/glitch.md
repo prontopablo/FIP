@@ -20,7 +20,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  glitch = loadShader("glitch.glsl");
+  glitch = loadShader(FIP.glitch);
 
   ireland = loadImage("ireland.jpg");
 

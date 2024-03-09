@@ -17,7 +17,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  cartoon = loadShader("cartoon.glsl");
+  cartoon = loadShader(FIP.cartoon);
 
   ireland = loadImage("ireland.jpg");
 

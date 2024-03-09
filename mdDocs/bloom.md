@@ -17,7 +17,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  bloom = loadShader("bloom.glsl");
+  bloom = loadShader(FIP.bloom);
 
   ireland = loadImage("ireland.jpg");
 

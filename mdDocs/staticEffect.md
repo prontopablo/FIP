@@ -20,7 +20,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  staticShader = loadShader("static.glsl");
+  staticShader = loadShader(FIP.staticEffect);
 
   ireland = loadImage("ireland.jpg");
 

@@ -11,7 +11,7 @@ PImage ireland;
 void setup() {
     size(1000, 1000, P3D);
 
-    motionBlur = loadShader("motionBlur.glsl");
+    motionBlur = loadShader(FIP.motionBlur);
     
     motionBlur.set("blurAmount", 100.0); // Set the parameter named "blurAmount" to 100.
     

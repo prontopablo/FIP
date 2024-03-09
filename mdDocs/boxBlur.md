@@ -17,7 +17,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  boxBlur = loadShader("boxBlur.glsl");
+  boxBlur = loadShader(FIP.boxBlur);
 
   ireland = loadImage("ireland.jpg");
 

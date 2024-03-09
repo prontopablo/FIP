@@ -19,7 +19,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  cannyEdgeDetection = loadShader("cannyEdgeDetection.glsl");
+  cannyEdgeDetection = loadShader(FIP.cannyEdgeDetection);
 
   ireland = loadImage("ireland.jpg");
 

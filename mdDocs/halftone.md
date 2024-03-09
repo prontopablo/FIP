@@ -22,7 +22,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  halftone = loadShader("halftone.glsl");
+  halftone = loadShader(FIP.halftone);
 
   ireland = loadImage("ireland.jpg");
 

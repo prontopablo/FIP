@@ -16,7 +16,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  kuwahara = loadShader("kuwahara.glsl");
+  kuwahara = loadShader(FIP.kuwahara);
 
   ireland = loadImage("ireland.jpg");
 }

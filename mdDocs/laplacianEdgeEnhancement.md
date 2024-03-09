@@ -18,7 +18,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  laplacianEdgeEnhancement = loadShader("laplacianEdgeEnhancement.glsl");
+  laplacianEdgeEnhancement = loadShader(FIP.laplacianEdgeEnhancement);
 
   ireland = loadImage("ireland.jpg");
 

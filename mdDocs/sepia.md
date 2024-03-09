@@ -16,7 +16,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  sepia = loadShader("sepia.glsl");
+  sepia = loadShader(FIP.sepia);
 
   ireland = loadImage("ireland.jpg");
 }

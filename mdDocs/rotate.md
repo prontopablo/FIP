@@ -18,7 +18,7 @@ PImage ireland;
 void setup() {
   size(1000, 1000, P3D);
 
-  rotate = loadShader("rotate.glsl");
+  rotate = loadShader(FIP.rotate);
 
   ireland = loadImage("ireland.jpg");
 
