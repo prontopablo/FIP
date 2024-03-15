@@ -4,6 +4,12 @@
 ## What is it?
 FIP is a library that allows you to add image-processing / post-processing effects to your Processing sketch. 
 
+<div style="display: flex; justify-content: center">
+        <div>
+        <img width="400" height="400" src="./data/FIP-Logo.jpg">
+        </div>
+</div>
+
 ## Features
 - 44 Effects
 - Hardware Accelerated
