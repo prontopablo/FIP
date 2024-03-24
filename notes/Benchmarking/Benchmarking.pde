@@ -12,7 +12,7 @@ ArrayList<Long> frameTimes = new ArrayList<>();
 void setup() {
     size(1000, 1000, P3D); // Set up the canvas with a renderer (P3D in this case)
 
-    shader = loadShader(FIP.gaussianBlur); // Load the glitch shader
+    shader = loadShader(FIP.gaussianBlur); // Load the shader
 
     ireland = loadImage("irelandBefore.jpg");
 
