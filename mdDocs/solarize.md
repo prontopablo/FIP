@@ -3,8 +3,6 @@ Inverts colors based on the intensity of pixel colors. If the average intensity 
 ## Parameters
 `texture` **Texture**: The input texture to be filtered. Default: **`The entire canvas`**
 <br>
-`resolution` **Vec2**: The resolution of the input texture. Default: **`vec2(1.0)`**
-<br>
 `threshold` **Float:** The intensity threshold above which colors will be inverted. Ranges from 0.0 to 1.0. Default: **`0.5`**
 
 ## Example

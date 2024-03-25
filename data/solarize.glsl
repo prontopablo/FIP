@@ -10,7 +10,6 @@ precision mediump int;
 */
 
 uniform sampler2D texture;
-uniform vec2 resolution;
 uniform float threshold = 0.5;
 
 varying vec4 vertColor;

@@ -1459,11 +1459,13 @@
 <h2 id="parameters">Parameters</h2>
 <p><code>texture</code> <strong>Texture</strong>: The input texture to be filtered. Default: <strong><code>The entire canvas</code></strong>
 <br>
-<code>resolution</code> <strong>Vec2</strong>: The resolution of the input texture. Default: <strong><code>undefined</code></strong>
+<code>texOffset</code> <strong>Vec2:</strong> The offset used for sampling neighboring pixels. Default: <strong><code>(1.0 / width, 1.0 / height)</code></strong>
 <br>
 <code>radius1</code> <strong>Float:</strong> The radius of the first Gaussian blur. Default: <strong><code>10.0</code></strong>
 <br>
-<code>radius2</code> <strong>Float:</strong> The radius of the second Gaussian blur. Default: <strong><code>1.0</code></strong></p>
+<code>radius2</code> <strong>Float:</strong> The radius of the second Gaussian blur. Default: <strong><code>1.0</code></strong>
+<br>
+<code>threshold</code> <strong>Float:</strong> The intensity threshold below which colors will be discarded. Default: <strong><code>0.01</code></strong></p>
 <h2 id="example">Example</h2>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">fip.*</span><span class="p">;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
@@ -1477,9 +1479,9 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">ireland</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadImage</span><span class="p">(</span><span class="s">&quot;ireland.jpg&quot;</span><span class="p">);</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="n">differenceOfGaussian</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;resolution&quot;</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="p">(</span><span class="n">width</span><span class="p">),</span><span class="w"> </span><span class="kt">float</span><span class="p">(</span><span class="n">height</span><span class="p">));</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">differenceOfGaussian</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;radius1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">);</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">differenceOfGaussian</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;radius2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="n">differenceOfGaussian</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;radius1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">differenceOfGaussian</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;radius2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">differenceOfGaussian</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;threshold&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>

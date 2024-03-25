@@ -3,11 +3,13 @@ Applies two Gaussian blurs to the input texture and calculates the Difference of
 ## Parameters
 `texture` **Texture**: The input texture to be filtered. Default: **`The entire canvas`**
 <br>
-`resolution` **Vec2**: The resolution of the input texture. Default: **`undefined`**
+`texOffset` **Vec2:** The offset used for sampling neighboring pixels. Default: **`(1.0 / width, 1.0 / height)`**
 <br>
 `radius1` **Float:** The radius of the first Gaussian blur. Default: **`10.0`**
 <br>
 `radius2` **Float:** The radius of the second Gaussian blur. Default: **`1.0`**
+<br>
+`threshold` **Float:** The intensity threshold below which colors will be discarded. Default: **`0.01`**
 
 ## Example
 ```java
@@ -23,9 +25,9 @@ void setup() {
 
   ireland = loadImage("ireland.jpg");
 
-  differenceOfGaussian.set("resolution", float(width), float(height));
   differenceOfGaussian.set("radius1", 10.0);
   differenceOfGaussian.set("radius2", 1.0);
+  differenceOfGaussian.set("threshold", 0.2);
 }
 
 void draw() {
