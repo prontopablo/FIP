@@ -5,6 +5,10 @@ precision mediump int;
 
 #define PROCESSING_TEXTURE_SHADER
 
+/*
+    Creates a mosaic effect on the texture.
+*/
+
 uniform sampler2D texture;
 uniform vec2 texOffset;
 uniform float mosaicSize = 40.0;

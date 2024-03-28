@@ -6,7 +6,7 @@ precision mediump int;
 #define PROCESSING_TEXTURE_SHADER
 
 /*
-    Followed: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/InvertColors.java
+    Inverts colours of the texture.
 */
 
 uniform sampler2D texture;

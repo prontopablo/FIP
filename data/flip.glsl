@@ -6,7 +6,7 @@ precision mediump int;
 #define PROCESSING_TEXTURE_SHADER
 
 /*
-    Followed: https://github.com/Milchreis/processing-imageprocessing/blob/master/src/milchreis/imageprocessing/Flip.java
+    Flips a texture depending on the flipHorizontal and flipVertical flags.
 */
 
 uniform sampler2D texture;

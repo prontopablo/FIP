@@ -6,7 +6,8 @@ precision mediump int;
 #define PROCESSING_TEXTURE_SHADER
 
 /*
-    Adds a vignette to the texture
+    Adds a vignette to the texture.
+    Followed: https://stackoverflow.com/questions/22654770/creating-vignette-filter-in-opencv
 */
 
 uniform sampler2D texture;

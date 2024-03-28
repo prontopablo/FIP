@@ -7,7 +7,6 @@ precision mediump int;
 
 /*
   Adds a cartoon effect to the image
-  Followed: https://docs.gimp.org/en/gimp-filter-cartoon.html
 */
 
 uniform sampler2D texture;
