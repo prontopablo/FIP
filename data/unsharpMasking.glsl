@@ -16,7 +16,7 @@ uniform float strength = 2.0;
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
 
-void main(void) {
+void main() {
     // Sample the original image
     vec4 originalColor = texture2D(texture, vertTexCoord.st);
     
