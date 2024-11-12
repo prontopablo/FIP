@@ -16,6 +16,9 @@ FIP is a library that allows you to add filters and effects to your Processing s
 > [!WARNING]
 > This library is for Processing. If you are using _p5.js_ instead, head [here](https://github.com/prontopablo/p5.FIP).
 
+## Live Demo
+A live demo can be found on the reference website [here](https://prontopablo.github.io/FIP/).
+
 ## Getting Started
 FIP can be installed from Proccesing, for instructions on installation and usage, head to the reference website [here](https://prontopablo.github.io/FIP/). Alternatively, FIP can be installed as a zip file, from [releases](https://github.com/prontopablo/FIP/releases/tag/latest).
 
