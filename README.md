@@ -1,25 +1,36 @@
 ## FIP (Fast Image Processing)
-> Real-time post-processing library for [Processing](https://processing.org/).
+<p align="center">
+<a href="https://tsoding.github.io/olive.c/"><img width="400" height="400" src="./data/FIP-Logo.jpg"></a>
+</p>
+
+> Real-time post-processing library written in GLSL for [Processing](https://processing.org/).
 
 ## What is it?
-FIP is a library that allows you to add image-processing / post-processing effects to your Processing sketch. 
-
-<div style="display: flex; justify-content: center">
-        <div>
-        <img width="400" height="400" src="./data/FIP-Logo.jpg">
-        </div>
-</div>
+FIP is a library that allows you to add filters and effects to your Processing sketch. It runs on the GPU and therefore outperforms the built-in Processing [filters](https://processing.org/reference/filter_.html).
 
 ## Features
 - 44 Effects
 - Hardware Accelerated
 - Documented
+##
+> [!WARNING]
+> This library is for Processing. If you are using _p5.js_ instead, head [here](https://github.com/prontopablo/p5.FIP).
 
 ## Getting Started
-FIP can be installed through the Processing Contribution Manager, for instructions on installation and usage, head [here](https://prontopablo.github.io/FIP/).
+FIP can be installed from Proccesing, for instructions on installation and usage, head to the reference website [here](https://prontopablo.github.io/FIP/). Alternatively, FIP can be installed as a zip file, from [releases](https://github.com/prontopablo/FIP/releases/tag/latest).
 
 ## Examples
-Example sketches are included in the FIP folder. 
+Once FIP has been installed, example sketches can be found from within Processing. These examples demonstrate how to use FIP in different ways.
+
+![image](https://github.com/user-attachments/assets/3ff5cdad-a237-40c8-9e73-fda3e8f5b9e8)
+
+_File -> Examples -> Contributed Libraries -> FIP_
+
+## Repository Structure
+- _data:_ Shader code itself (_files ending in .glsl_). This is where the actual functionality of the library is.
+- _docs:_ Reference website code that has been generated using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) from MarkDown files.
+- _mdDocs:_ Markdown files for the reference website. Much more human-readable than the files found in the _docs_ folder, should the reference website no longer be live.
+- _notes:_ Personal notes taken during the development of the FIP. Only of interest if one is creating a shader library for Processing.
 
 ## Processing Library Guidelines
 In accordance with the [Processing library guidelines](https://github.com/benfry/processing4/wiki/Library-Guidelines):
