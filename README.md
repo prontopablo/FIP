@@ -1,26 +1,32 @@
 ## FIP (Fast Image Processing)
-<p align="center">
-<a href="https://tsoding.github.io/olive.c/"><img width="400" height="400" src="./data/FIP-Logo.jpg"></a>
-</p>
+<a href="https://github.com/prontopablo/FIP"><img width="400" height="400" src="./data/FIP-Logo.jpg"></a>
 
 > Real-time post-processing library written in GLSL for [Processing](https://processing.org/).
 
 ## What is it?
 FIP is a library that allows you to add filters and effects to your Processing sketch. It runs on the GPU and therefore outperforms the built-in Processing [filters](https://processing.org/reference/filter_.html).
 
+## <a name="#Video Tutorial"></a>Video Tutorial
+<a href = "https://www.youtube.com/watch?v=pnqoJCbdJFw">
+<img width = "1000" src = "https://github.com/user-attachments/assets/88642091-bcb2-4c9c-9ae2-4904a27f092c">
+</a>
+
+> [!TIP]
+> The above image is a clickable link to a YouTube video
+
+> [!WARNING]
+> This library is for **Processing**. If you are using _p5.js_ instead, head [here](https://github.com/prontopablo/p5.FIP).
+
 ## Features
 - 44 Effects
 - Hardware Accelerated
 - Documented
-##
-> [!WARNING]
-> This library is for Processing. If you are using _p5.js_ instead, head [here](https://github.com/prontopablo/p5.FIP).
 
 ## Live Demo
 A live demo can be found on the reference website [here](https://prontopablo.github.io/FIP/).
 
 ## Getting Started
-FIP can be installed from Proccesing, for instructions on installation and usage, head to the reference website [here](https://prontopablo.github.io/FIP/). Alternatively, FIP can be installed as a zip file, from [releases](https://github.com/prontopablo/FIP/releases/tag/latest).
+FIP can be installed from Proccesing, for instructions on installation and usage, see the [video tutorial](https://www.youtube.com/watch?v=pnqoJCbdJFw) or head to the reference website [here](https://prontopablo.github.io/FIP/). Alternatively, FIP can be installed as a zip file, from [releases](https://github.com/prontopablo/FIP/releases/tag/latest).
 
 ## Examples
 Once FIP has been installed, example sketches can be found from within Processing. These examples demonstrate how to use FIP in different ways.
